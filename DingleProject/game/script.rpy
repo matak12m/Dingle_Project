@@ -4,7 +4,14 @@
 # name of the character.
 
 define e = Character("Eileen")
+define a = Character("An Phiast")
+define f = Character("Fungie")
+define p = Character("Priest")
 
+transform bgspace:
+    xalign 0.0,
+    yalign 0.0,
+    xysize(1920, 1080),
 
 # The game starts here.
 
@@ -12,21 +19,23 @@ label start:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    # images directory to show it.s
 
-    scene bg room
+    scene bg map at bgspace
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show an phiast talking happy
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    a "Hey there! I'm An Phiast!"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    show an phiast happy
+
+    a "Are you going to the Animation Dingle as well?"
 
 
 
