@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 12: expected 'comma or end of line' not found.
-    xalign 0.0;
-              ^
+The label start is defined twice, at File "game/script.rpy", line 19:
+label start:
+and File "game/script.rpy", line 47:
+    label start:
+
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Oct 16 14:08:30 2024
+Thu Oct 17 14:32:04 2024
