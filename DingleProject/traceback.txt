@@ -1,32 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 49, in script
-    show screen mapUI
-  File "renpy/common/000statements.rpy", line 647, in execute_show_screen
-    renpy.show_screen(name, *args, **kwargs)
-Exception: Screen mapUI is not known.
-
+  File "game/script.rpy", line 26, in script
+    with Fade(0.5)
+TypeError: Fade() missing 2 required positional arguments: 'hold_time' and 'in_time'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 49, in script
-    show screen mapUI
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1974, in execute
-    self.call("execute")
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1953, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\statements.py", line 374, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 647, in execute_show_screen
-    renpy.show_screen(name, *args, **kwargs)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 1327, in show_screen
-    raise Exception("Screen %s is not known.\n" % (name[0],))
-Exception: Screen mapUI is not known.
-
+  File "game/script.rpy", line 26, in script
+    with Fade(0.5)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1361, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 257, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 1578, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2666, in interact_core
+    trans = instantiate_transition(None, old_root, layers_root)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2575, in instantiate_transition
+    trans = self.ongoing_transition[layer](
+TypeError: Fade() missing 2 required positional arguments: 'hold_time' and 'in_time'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 DingleProject 1.0
-Thu Oct 17 14:35:32 2024
+Thu Oct 17 16:31:31 2024

@@ -9,6 +9,9 @@ define f = Character("Fungie")
 define c = Character("St. Cuan")
 define n = Character(" ")
 
+define fast_fade = Dissolve(0.5)
+
+
 transform bgspace:
     xalign 0.0,
     yalign 0.0,
@@ -22,27 +25,49 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.s
 
-    scene dingle bay at bgspace
+    show bus inside at bgspace
+    with fast_fade
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show an phiast talking happy
 
     # These display lines of dialogue.
 
-    a "Hey there! I'm An Phiast!"
+    n "It's your third year of college, and your lecturers arranged for your class to go to Animation Dingle."
+    n"You're not exactly sure what the event is about, but you like art, and apparently animators from all over are going to be there!"
 
-    show an phiast happy
+    show bus_window_windmill at bgspace
+    with fast_fade
 
-    a "Are you going to the Animation Dingle as well?"
+    n"A bit of a strange place to get together. It's on the exact opposite coast from Dublin, in the middle of the countryside."
+    n"how did all the animators from america get there?"
+    n"you're lucky your college ordered this bus, otherwise it would be impossible for you."
+    n"unfortunately, your friends couldn't come. There's your classmates, sure, but you don't really talk to them... "
+    n"hopefully it won't get too lonely."
 
-    n "An Phiast seems eager to show you around! But where would you like to go?"
+    n"..."
+
+    n"at least the views are lovely."
+
+    show dingle town at bgspace 
+    with   fast_fade
+
+    show an phiast talking happy 
+    
+    with vpunch
+
+    
+    a "pekaboo!"
+    
+    
 
     
 
-    n "let'see"
+    
+
+    
+
+    
+
+    
 
 
     # call the screen with the map and buttons
