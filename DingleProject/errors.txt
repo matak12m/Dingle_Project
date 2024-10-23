@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 26: end of line expected.
-    with wipeleft 0.5
-                  ^
+File "game/script.rpy", line 113: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    from middle
+               ^
+
+File "game/script.rpy", line 117: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    from offscreen_right
+                        ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Oct 17 16:28:26 2024
+Wed Oct 23 16:50:58 2024

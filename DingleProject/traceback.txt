@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 26, in script
-    with Fade(0.5)
-TypeError: Fade() missing 2 required positional arguments: 'hold_time' and 'in_time'
+  File "game/script.rpy", line 111, in script
+    with look_right
+TypeError: got an unexpected keyword argument 'old_widget'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 26, in script
-    with Fade(0.5)
+  File "game/script.rpy", line 111, in script
+    with look_right
   File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1361, in execute
     renpy.exports.with_statement(trans, paired=paired)
   File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 257, in with_statement
@@ -22,9 +22,13 @@ Full traceback:
     trans = instantiate_transition(None, old_root, layers_root)
   File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2575, in instantiate_transition
     trans = self.ongoing_transition[layer](
-TypeError: Fade() missing 2 required positional arguments: 'hold_time' and 'in_time'
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 623, in __call__
+    new_scope = signature.apply(args, kwargs, partial=True, apply_defaults=False)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\parameter.py", line 384, in apply
+    raise TypeError(
+TypeError: got an unexpected keyword argument 'old_widget'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 DingleProject 1.0
-Thu Oct 17 16:31:31 2024
+Wed Oct 23 16:40:31 2024
