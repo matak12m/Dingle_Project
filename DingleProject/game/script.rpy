@@ -170,8 +170,10 @@ label start:
 
 label bay_pressed:
     scene dingle bay at bgspace
+    with fast_fade
     
     show an phiast talking happy
+    with fast_fade
     a "This is the bay!"
     a "I like to ge here every once in a while to fish."
     show an phiast unhappy
@@ -212,20 +214,68 @@ label bay_pressed:
         show an phiast unhappy
         a "Whoa, dude that's..."
         show an phiast blush
-        a "...That's SO hardcore."
+        a "...That's SO hardcore."                                                                                                      #ADD DETAILED CG
         jump after_choice_bay_1
 
 
     label after_choice_bay_1:
         show bay sea view at bgspace
+        with fast_fade
         "You both set up your fishing rods and take in the view of the sea in front of you."
         "An Phiast seems happy just watching the view, but you can't help but start a conversation."
         "After all, you still don't know much about him, and this seems like the perfect opportunity."
+        n_thought"..."
+        menu:
+
+        "What do you usually do when you wait for a bite?":
+            jump choice_bay_2_question
+        "Tell me more about Fungie":
+            jump choice_bay_2_fungie
+        "What kind of fish are here?"
+            jump choice_bay_2_fish
+        n_thought "stay silent":
+            jump choice_bay_2_silent
+
+
+    label choice_bay_2_question:
+
+        show an phiast happy at little_right
+
+        a"oh?"
+        a"..."
+        a"I usually just think about stuff..."
+        a"It's really calming, you know? I get a chance to sort through my thoughts, or think about my other hobbies."
+        n "Other hobbies? like what?"
+        a"Well, you're probably not gonna be surprised when I say this, but..."
+        a"I'm a bit of an artist."
+        a"I like to draw, i even tried animating a little, but that's not really my specialty."
+        a"I like to write. I even brought a notebook with me!"
+        n"do you write while fishing?"
+        a"Yeah! it's great for writing. I just didn't want to start scribbling in my own little bubble while I'm here with you, y'know?"
+        "An phiast stares into your eyes for a second, before turning back to the sea."
+
+        jump after_choice_bay_2
+    
+    label choice_bay_2_fungie:
+        
 
 
 
+        jump after_choice_bay_2
+
+    label choice_bay_2_fish:
+        
+        jump after_choice_bay_2
 
 
+    label choice_bay_2_silent:
+
+        jump after_choice_bay_2
+
+
+    label after_choice_bay_2:
+
+        "After choice 2 text TBA"
     
 
 
