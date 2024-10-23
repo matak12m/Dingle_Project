@@ -26,38 +26,41 @@ screen MapUI:
     
 
     imagebutton:
-        xpos 618
-        ypos 670
+        xpos 130
+        ypos 575
         idle "map/house1_idle.png"
-        hover "map/house1_hover.png"
+        hover "map/bay overlay.png"
         action Jump("house1_pressed")
         
     imagebutton:
-        xpos 1596
-        ypos 200
+        xpos 980
+        ypos 368
         idle "map/house2_idle.png"
-        hover "map/house2_hover.png"
+        hover "map/church overlay.png"
         action Jump("house2_pressed")
 
     imagebutton:
-        xpos 596
-        ypos 165
+        xpos 1085
+        ypos 360
+        
         idle "map/house2_idle.png"
-        hover "map/house2_hover.png"
+        hover "map/town overlay.png"
         action Jump("house3_pressed")
 
     imagebutton:
-        xpos 1596
-        ypos 865
+        xpos 778
+        ypos 587
+        
+
         idle "map/house2_idle.png"
-        hover "map/house2_hover.png"
+        hover "map/tourist office overlay.png"
         action Jump("house4_pressed")
 
     imagebutton:
         xpos 96
         ypos 65
-        idle "map/house2_idle.png"
-        hover "map/house2_hover.png"
+        idle "map/house1_idle.png"
+        hover "map/house1_hover.png"
         action Jump("house5_pressed")
 
         

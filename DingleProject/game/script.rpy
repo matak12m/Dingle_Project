@@ -73,10 +73,15 @@ label start:
     # call the screen with the map and buttons
     label map_screen:
         scene dingle map at bgspace
-        call screen MapUI
+       
         
-        n " "
-    
+        n "Our professors gave us this map of the town. The Hotel where the Animation Dingle is taking place is a bit out of town."
+        scene darkened map at bgspace
+        with fast_fade
+        n"for now, let's explore the town. I can already see a few clear options..."
+        call screen MapUI
+
+
 
 label house1_pressed:
     scene dingle bay at bgspace
@@ -108,6 +113,7 @@ label house4_pressed:
 label house5_pressed:
     scene dingle town at bgspace
     "House 5 was pressed!"
+    "This is a test button. back to the map you go!"
     jump after_house_choice
 
 
