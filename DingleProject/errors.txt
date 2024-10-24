@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 17: unexpected EOF while parsing
-    0;
-      ^
+File "game/script.rpy", line 460: end of line expected.
+    with fast fade
+              ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Oct 24 15:32:33 2024
+Thu Oct 24 18:17:19 2024
