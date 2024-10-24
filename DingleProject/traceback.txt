@@ -1,34 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 111, in script
-    with look_right
-TypeError: got an unexpected keyword argument 'old_widget'
+Compiling ATL code at game/script.rpy:106
+  File "game/script.rpy", line 105, in script
+    show black screen at bgspace:
+Exception: Not a displayable: <partial <class 'renpy.display.transition.Dissolve'> (1.5,) {}>
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 111, in script
-    with look_right
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1361, in execute
-    renpy.exports.with_statement(trans, paired=paired)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 257, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 1578, in do_with
-    return self.interact(trans_pause=True,
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2666, in interact_core
-    trans = instantiate_transition(None, old_root, layers_root)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2575, in instantiate_transition
-    trans = self.ongoing_transition[layer](
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 623, in __call__
-    new_scope = signature.apply(args, kwargs, partial=True, apply_defaults=False)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\parameter.py", line 384, in apply
-    raise TypeError(
-TypeError: got an unexpected keyword argument 'old_widget'
+  File "game/script.rpy", line 105, in script
+    show black screen at bgspace:
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 503, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\scenelists.py", line 477, in add
+    thing.visit_all(lambda d : None)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 424, in visit_all
+    for d in self.visit():
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 816, in visit
+    block = self.compile()
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 723, in compile
+    block = self.atl.compile(self.context)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 925, in compile
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 925, in <listcomp>
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 1240, in compile
+    child = renpy.easy.displayable(child)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\easy.py", line 145, in displayable
+    raise Exception("Not a displayable: %r" % (d,))
+Exception: Not a displayable: <partial <class 'renpy.display.transition.Dissolve'> (1.5,) {}>
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 DingleProject 1.0
-Wed Oct 23 16:40:31 2024
+Thu Oct 24 14:38:31 2024

@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 113: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    from middle
-               ^
-
-File "game/script.rpy", line 117: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    from offscreen_right
-                        ^
+File "game/script.rpy", line 17: unexpected EOF while parsing
+    0;
+      ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Oct 23 16:50:58 2024
+Thu Oct 24 15:32:33 2024

@@ -9,8 +9,13 @@ define f = Character("Fungie")
 define c = Character("St. Cuan")
 define n = Character("You")
 define n_thought = Character("You", what_italic =True)
+define u = Character("???")
 
 define fast_fade = Dissolve(0.5)
+define slow_fade = Dissolve(1.5)
+
+# define APRelationship = 0;
+
 
 transform middle:
     linear 0.3 xalign 0.5
@@ -84,87 +89,204 @@ label start:
 
     n_thought"at least the views are lovely."
 
-    show dingle town at bgspace 
+    scene dingle town
     with   fast_fade
 
     "before you know it, you arrive at Dingle town."
     "The weather is surprisingly warm today, although your professors let you know that it won't stay that way."
-    "You still have plenty of time before the kickoff event of Animation Dingle starts. you're not really sure what to do."
+    "The kickoff event of Animation Dingle starts tomorrow. you're not really sure what to do."
     "Just waiting in the hotel seems like a waste. And all your classmates already headed off somewhere."
     "guess it's time to explore the town a little."
 
+    scene street_beach_fence
+    with fast_fade
 
-
-
-    show an phiast talking happy 
+    "You wander around, mostly following the view"
+    n_thought"The bay looks wonderful."
+    "You sit in the grass for a little bit, taking in the view."
+    "You didn't really get to sleep much, you had to wake up early for the bus, and couldn't fall asleep while on it."
+    n "Yawn..."
+    "And before you know it, you're slowly..."
+    "falling... {w=1.0} "
+    scene black_screen
+    with fast_fade
+    "asleep...{w=1.0}\n ...{w=1.0} \n ..."
     
+
+    scene street_beach_fence
+    with hpunch
+    u "Heya!"
+    n "{w=0.3}Huh??"
+    
+    show an phiast happy 
+    with hpunch
+    u "Oh, I'm sorry, did I startle you?"
+    
+    show an phiast  unhappy 
+    with hpunch
+    
+    n "{w=0.1}???????"
     with vpunch
+    n_thought "What the heck is this sea monster??" 
+    with vpunch
+    "You reach into you bag for-"
+    u "Whoa, whoa, whoa!" 
+    u "I'm not gonna hurt you!"
+    show an phiast unhappy:
+        xalign 0.5 yalign 1.0
+        linear 0.3 yalign 1.1
+    u "Sorry for scaring you like that, I just thought I would walk by and say hello"
+    n_thought "What... Who is this... thing? creature?"
+    show an phiast unhappy:
+        xalign 0.5 yalign 1.1
+        linear 1.5 xalign 1.5
+    u "Okay, um. I'm just gonna go then. {w=0.3}  {i} Gosh this is awkward...{/i}"
+    with vpunch
+    n "Wait!"
+    
+    n_thought "They seem friendly enough, and you're actually kind of curious"
+    show an phiast unhappy: 
+        xalign 1.5 yalign 1.1
+        linear 1.0 xalign 0.5
+
+    n "{w=0.3}...What's your name?"
+    u "..."
+    show an phiast happy
+    a "...{w=0.3}I'm An Phiast"
+    n "Sorry if I seemed unfriendly. I've just never met someone...{w=0.3} like you before."
+    a "Oh, I get that a lot."
+    show an phiast talking happy
+    a "Apology accepted!"
+    show an phiast happy
+    a"{w=0.3} ..."
+    "You both look at each other, awkwardly.{w=0.2} Now that you started a conversation, you're not sure what to talk about."
+    n"..."
+    n "{w=0.3}...You know, I'm here for the Animation Dingle tomorrow, and I need to kill some time before it starts tomorrow... "
+    n "{w=0.3}...do you want to walk around town a little bit?"
+    show an phiast happy:
+        xalign 0.5 yalign 1.1
+        linear 0.3 yalign 1.0
+    "an phiast perks up!"
+    a "Oh!"
+    a "Now that's a coincidence!"
+    show an phiast talking happy
+    a "I'm actually kind of the mascot of Animation Dingle!"
+    show an phiast happy
+    a "I come by every year, It's like a little tradition."
+    show an phiast unhappy
+    a "Although I can't exactly say people here are used to me..."
+    show an phiast happy
+    a "But yeah! I would love to just walk around town with someone!{w=0.3} ...I mean...{w=0.1} you!"
+    "ignoring that little hiccup, you continue"
+    n "Great! I actually have a-"
+    "but before you can continue your thought..."
+    
+
 
     
-    a "pekaboo!"
-    n "AAAAAAAAAAAAAA!"
-    a "yo chill, i'm an phiast. I'm your new friend. wana explore Dingle town? sure, let's go! let's go!"
-    a "btw i'm the mascot of Animation Dingle in case you didnt know. so, yea."
 
     show fungie smug at offscreen_right
 
+    show fungie smug:
+        xalign 2.0 yalign 1.0
+        linear 0.2 xalign 0.7
+    with vpunch
+
     show an phiast unhappy:
         xalign 0.5 yalign 1.0
-        linear 0.3 xalign 0.2
+        linear 0.2 xalign 0.15
         xzoom -1.0
 
 
     
 
-    show fungie smug:
-        xalign 2.0 yalign 1.0
-        linear 0.3 xalign 0.8
+    
 
+    u "Oh.{w=1.0}  You're here."
+    u "Guess it's that time of year again, huh?"
+    u "Just make sure not to scare anymore people this year."
+    a "Ugh.{w=0.2}  leave me alone, Fungie."
+    f "Well, I have to look after my people, don't I?"
+    f "This is my town, An Phiast.{w=0.4}  I don't want you making a mess."
+    a "You do this every year, Fungie.{w=0.2} I don't need to hear your lectures."
+    "Fungie ignores him and instead, he turns to you."
+    f "I don't believe I've seen you around.{w=0.4} Are you new here?{w=0.4} Is he bothering you?"
+
+    menu:
+
+        "I came for the Animation Dingle.":
+            jump choice_prologue_1_AD
+        "No, leave him alone.":
+            jump choice_prologue_1_leave
+        "Who are you?":
+            jump choice_prologue_1_whoareyou
+
+    
+    label choice_prologue_1_AD:
+
+        f "Oh, you're one of them?"
+        f "I'm sorry,{w=0.4} I mistook you for someone else."
+        f "You might think you can just bring An Phiast-boy over here and take over me and my town, but you're wrong."
+        f "Don't forget, Dingle is letting {i}You{/i} be here.{w=1.0} Not the other way around."
+        jump after_choice_prologue_1
+
+    label choice_prologue_1_leave:
+        f "Oh, I see how it is."
+        f "Very well.{w=0.4} enjoy your time with the sea monster. Everyone knows they're soooo inteligent."
+        with vpunch
+        a "Hey!" 
+        f "Anyways.{w=0.4} I can't kick you out of Dingle, but that doesn't mean you're welcome."
+        f "There's only one mascot in Dingle, and that is {i}Me!{/i}"
+        f "And I will make sure it stays that way."
+        jump after_choice_prologue_1
+
+    label choice_prologue_1_whoareyou:
+        f "Oh, where are my manners. I'm Fungie.{w=0.4} Fungie the Dolphin."
+        f "Surely you've heard of me? I'm basically the guardian of Dingle!"
+        f "Guarding it from sea monsters like An Phiast here."
+        show an phiast angry
+        with vpunch
+        a "Hey!" 
+        f "Anyways, this is my town. Make sure you remember that."
+        f "There's space for only one mascot in Dingle."
+        jump after_choice_prologue_1
+
+
+
+
+    label after_choice_prologue_1:
+
+        show fungie smug at offscreen_left
+        show an phiast unhappy at middle
+        "And just like that, Fungie speeds off."
+        a "soo...{w=0.5} that's Fungie."
+        a "He...{w=0.2} doesn't like me."
+        n "What is his deal?"
+        a "He's the famous dolphin of Dingle. The people love him here. He's like their mascot"
+        a "He thinks I'm out to steal his title or something. I dunno."
+        a "Anyways, I don't really want to talk about that right now. Let's just go somewhere else."
+
+        n_thought "What was all that about???"
+        n_thought "Fungie seems so hostile towards him, but you can't see why."
+        "You let it go for now, before you remember once again"
+        n "Oh yeah! here, have a look."
+    
         
-    with vpunch
-    
-    f "yo bitches this is my town"
-    f "An Phiast? pffft. more like sore loser-Phiast."
-    f "don't even try taking over my town."
-    f "anyways cya"
-    show fungie smug at offscreen_left
-    show an phiast unhappy at middle
-
-    a "soo... that Fungie."
-    a "yeah he's a bit of a dick."
-    a "anyways, let's go!"
-
-    n_thought "What was all that about???"
-
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-   
-    
-    scene dingle map at bgspace
-       
+        scene dingle map at bgspace
+        with fast_fade
         
-    n "Our professors gave us this map of the town. The Hotel where the Animation Dingle is taking place is a bit out of town."
-    scene darkened map at bgspace
-    with fast_fade
-    n"for now, let's explore the town. I can already see a few clear options..."
-
-    label map_screen:  
+            
+        n "Our professors gave us this map. The Hotel where the Animation Dingle is taking place is a bit out of town."
         scene darkened map at bgspace
         with fast_fade
-        call screen MapUI      # call the buttons
+        n"for now, we could see where we wanna go. I can already see a few clear options..."
+
+        label map_screen:  
+            scene darkened map at bgspace
+            with fast_fade
+            "Click where you would like to go!"
+            call screen MapUI      # call the buttons
+            
 
 
 
@@ -199,7 +321,7 @@ label bay_pressed:
         jump after_choice_bay_1
     
     label choice_bay_1_no:
-        show an phiast blush
+        show an phiast happy
         a "Well let's change that then! it's not too hard."
         show an phiast talking happy
         a "You neeed to put your bait on the hook first, and the you cast the line."
@@ -213,8 +335,8 @@ label bay_pressed:
     label choice_bay_1_yes:
         show an phiast unhappy
         a "Whoa, dude that's..."
-        show an phiast blush
-        a "...That's SO hardcore."                                                                                                      #ADD DETAILED CG
+        show an phiast cg
+        a "...That's SO hardcore."                                                                                                      
         jump after_choice_bay_1
 
 
@@ -227,14 +349,14 @@ label bay_pressed:
         n_thought"..."
         menu:
 
-        "What do you usually do when you wait for a bite?":
-            jump choice_bay_2_question
-        "Tell me more about Fungie":
-            jump choice_bay_2_fungie
-        "What kind of fish are here?"
-            jump choice_bay_2_fish
-        n_thought "stay silent":
-            jump choice_bay_2_silent
+            "What do you usually do when you wait for a bite?":
+                jump choice_bay_2_question
+            "Tell me more about Fungie":
+                jump choice_bay_2_fungie
+            "What kind of fish are here?":
+                jump choice_bay_2_fish
+            "{i}stay silent{/i}":
+                jump choice_bay_2_silent
 
 
     label choice_bay_2_question:
