@@ -198,7 +198,7 @@ label start:
     show fungie smug at offscreen_right
 
     show fungie smug:
-        xalign 2.0 yalign 1.0
+        xalign 2.0 yalign -1.0
         linear 0.2 xalign 0.7
     with vpunch
 
@@ -456,10 +456,10 @@ label bay_pressed:
 
         "You feel like you understand An Phiast a little more."
         "{w=1.5}...You both stay there for a while, hoping to catch some fish. but unfortunately, nothing bites."
-        show an phiast happy
+        show an phiast unhappy
         with fast_fade
-        a "I think we're all out of luck today, but that's fine."
-        a "Do you want to go somewhere else?"
+        a "I think I see Fungie in the water..."
+        a "I'd rather not talk to him right now. Do you want to go somewhere else before he sees us?"
         "You pull up you town map again."
         n "Let's see..."
         
