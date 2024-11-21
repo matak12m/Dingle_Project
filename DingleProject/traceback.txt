@@ -1,28 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 298, in script
-    "Click where you would like to go!"
-ScriptError: could not find label 'church_pressed'.
+  File "game/fishing_bay.rpy", line 110, in script
+    $ FRelationship+=1;
+  File "game/fishing_bay.rpy", line 110, in <module>
+    $ FRelationship+=1;
+NameError: name 'FRelationship' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\main.py", line 652, in main
-    run(restart)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\main.py", line 148, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\execution.py", line 958, in run_context
-    context.run()
-  File "game/script.rpy", line 298, in script
-    "Click where you would like to go!"
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'church_pressed'.
+  File "game/fishing_bay.rpy", line 110, in script
+    $ FRelationship+=1;
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/fishing_bay.rpy", line 110, in <module>
+    $ FRelationship+=1;
+NameError: name 'FRelationship' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 DingleProject 1.0
-Thu Oct 24 18:19:06 2024
+Thu Nov 21 14:13:56 2024
