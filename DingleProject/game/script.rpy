@@ -3,13 +3,13 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")  #character customizable stats: font size, font colour, text box (image background or none), bold, italic, font family, outlines, dropshadow 
-define a = Character("An Phiast")   #using who_ and what_
-define f = Character("Fungie")
-define c = Character("St. Cuan")
-define n = Character("You")
-define n_thought = Character("You", what_italic =True)
-define u = Character("???")
+define e = Character("Eileen", window_background=Frame("gui/textbox.png"))  #character customizable stats: font size, font colour, text box (image background or none), bold, italic, font family, outlines, dropshadow 
+define a = Character("An Phiast", window_background=Frame("gui/textboxGreen.png"))   #using who_ and what_
+define f = Character("Fungie", window_background=Frame("gui/textboxGrey.png"), color = '#57A773')
+define c = Character("St. Cuan", window_background=Frame("gui/textbox.png"))
+define n = Character("You", what_italic = True, window_background=Frame("gui/thoughtbox.png"))
+define n_thought = Character("You")
+define u = Character("???", window_background=Frame("gui/textbox.png"))
 
 define fast_fade = Dissolve(0.5)
 define slow_fade = Dissolve(1.5)

@@ -1,26 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/fishing_bay.rpy", line 110, in script
-    $ FRelationship+=1;
-  File "game/fishing_bay.rpy", line 110, in <module>
-    $ FRelationship+=1;
-NameError: name 'FRelationship' is not defined
+  File "renpy/common/00start.rpy", line 193, in script
+    python:
+  File "renpy/common/00start.rpy", line 194, in <module>
+    renpy.execute_default_statement(True)
+  File "game/screens/dialogue_screens.rpy", line 99, in execute_default
+    default quick_menu = True
+Exception: store.quick_menu is being given a default a second time.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/fishing_bay.rpy", line 110, in script
-    $ FRelationship+=1;
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
+  File "renpy/common/00start.rpy", line 193, in script
+    python:
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/fishing_bay.rpy", line 110, in <module>
-    $ FRelationship+=1;
-NameError: name 'FRelationship' is not defined
+  File "renpy/common/00start.rpy", line 194, in <module>
+    renpy.execute_default_statement(True)
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 372, in execute_default_statement
+    i.execute_default(start)
+  File "game/screens/dialogue_screens.rpy", line 99, in execute_default
+    default quick_menu = True
+Exception: store.quick_menu is being given a default a second time.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 DingleProject 1.0
-Thu Nov 21 14:13:56 2024
+Sun Jan 19 16:51:09 2025

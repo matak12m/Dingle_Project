@@ -2,13 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 27: unexpected EOF while parsing
-    0;
-      ^
-
-File "game/script.rpy", line 29: unexpected EOF while parsing
-    0;
-      ^
+File "game/script.rpy", line 8: is not terminated with a newline. (Check strings and parenthesis.)
+    define f = Character("Fungie", window_background=Frame("gui/textboxGrey.png"), color = 
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Nov 21 14:14:22 2024
+Sun Jan 19 21:17:14 2025
