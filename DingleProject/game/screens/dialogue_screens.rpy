@@ -37,17 +37,19 @@ init python:
 
 # Style for the dialogue window
 style window:
-    xalign 0.5
+    xalign 0.0
     yalign 1.0
-    xysize (1231, 277)
+    xysize (1920, 277)
     padding (40, 10, 40, 40)
-    background Image("gui/thoughtbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/thoughtbox.png", xalign=0.0, yalign=1.0)
+
 
 # Style for the dialogue
 style say_dialogue:
     adjust_spacing False
     ypos 60
     color '#000'
+    background Image("gui/thoughtbox.png", xalign=0.5, yalign=1.0)
 
 # The style for dialogue said by the narrator
 style say_thought:

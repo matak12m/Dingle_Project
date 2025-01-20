@@ -3,16 +3,17 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen", window_background=Frame("gui/textbox.png"))  #character customizable stats: font size, font colour, text box (image background or none), bold, italic, font family, outlines, dropshadow 
-define a = Character("An Phiast", window_background=Frame("gui/textboxGreen.png"))   #using who_ and what_
-define f = Character("Fungie", window_background=Frame("gui/textboxGrey.png"), color = '#57A773')
-define c = Character("St. Cuan", window_background=Frame("gui/textbox.png"))
-define n = Character("You", what_italic = True, window_background=Frame("gui/thoughtbox.png"))
-define n_thought = Character("You")
-define u = Character("???", window_background=Frame("gui/textbox.png"))
 
-define fast_fade = Dissolve(0.5)
-define slow_fade = Dissolve(1.5)
+define e = Character("Eileen", window_background=Frame("gui/textbox.png"))  #character customizable stats: font size, font colour, text box (image background or none), bold, italic, font family, outlines, dropshadow 
+define a = Character("An Phiast", window_background=Frame("gui/textboxGreen.png"), color = '#004418', what_font = "RujisHandwritingFontv.2.0.ttf")   #using who_ and what_
+define f = Character("Fungie", window_background=Frame("gui/textboxGrey.png"),color = '#45455c', what_font = "ArchitectsDaughter.ttf" ,what_size = 33)
+define c = Character("St. Cuan", window_background=Frame("gui/textbox.png"))
+define player = Character("You", window_background=Frame("gui/textbox.png"))
+define player_thought = Character("You", what_italic = True, window_background=Frame("gui/thoughtbox.png"))
+define u = Character("???", window_background=Frame("gui/textbox.png"))
+define n = Character("", window_background=Frame("gui/thoughtbox.png"))
+define fast_fade = Dissolve(0.5, window_background=Frame("gui/textbox.png"))
+define slow_fade = Dissolve(1.5, window_background=Frame("gui/textbox.png"))
 
 
 
@@ -77,6 +78,8 @@ transform bgspace:
 
 # The game starts here.
 
+window show
+
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
@@ -85,55 +88,55 @@ label start:
 
     show bus inside at bgspace
     with fast_fade
-
+   
 
     # These display lines of dialogue.
 
-    "It's your third year of college, and your lecturers arranged for your class to go to Animation Dingle."
-    "You're not exactly sure what the event is about, but you like art, and apparently animators from all over are going to be there!"
+    n "It's your third year of college, and your lecturers arranged for your class to go to Animation Dingle."
+    n "You're not exactly sure what the event is about, but you like art, and apparently animators from all over are going to be there!"
 
     show bus_window_windmill at bgspace
     with fast_fade
 
-    "While on the bus, you start to think to yourself."
-    n_thought"A bit of a strange place to get together. It's on the exact opposite coast from Dublin, in the middle of the countryside."
-    n_thought"how did all the animators from america get there?"
-    n_thought"we're lucky the college ordered this bus, otherwise it would be impossible"
-    n_thought"Too bad my friends couldn't come. There's my classmates, sure, but I've never really talked to them... "
-    n_thought"hopefully it won't get too lonely."
+    n "While on the bus, you start to think to yourself."
+    player_thought"A bit of a strange place to get together. It's on the exact opposite coast from Dublin, in the middle of the countryside."
+    player_thought"how did all the animators from america get there?"
+    player_thought"we're lucky the college ordered this bus, otherwise it would be impossible"
+    player_thought"Too bad my friends couldn't come. There's my classmates, sure, but I've never really talked to them... "
+    player_thought"hopefully it won't get too lonely."
 
-    n_thought"..."
+    player_thought"..."
 
-    n_thought"at least the views are lovely."
+    player_thought"at least the views are lovely."
 
     scene dingle town
     with   fast_fade
 
-    "before you know it, you arrive at Dingle town."
-    "The weather is surprisingly warm today, although your professors let you know that it won't stay that way."
-    "The kickoff event of Animation Dingle starts tomorrow. you're not really sure what to do."
-    "Just waiting in the hotel seems like a waste. And all your classmates already headed off somewhere."
-    "guess it's time to explore the town a little."
+    n "before you know it, you arrive at Dingle town."
+    n "The weather is surprisingly warm today, although your professors let you know that it won't stay that way."
+    n "The kickoff event of Animation Dingle starts tomorrow. you're not really sure what to do."
+    n "Just waiting in the hotel seems like a waste. And all your classmates already headed off somewhere."
+    n "guess it's time to explore the town a little."
 
     scene street_beach_fence
     with fast_fade
 
-    "You wander around, mostly following the view"
-    n_thought"The bay looks wonderful."
-    "You sit in the grass for a little bit, taking in the view."
-    "You didn't really get to sleep much, you had to wake up early for the bus, and couldn't fall asleep while on it."
-    n "Yawn..."
-    "And before you know it, you're slowly..."
-    "falling... {w=1.0} "
+    n "You wander around, mostly following the view"
+    player_thought"The bay looks wonderful."
+    n "You sit in the grass for a little bit, taking in the view."
+    n "You didn't really get to sleep much, you had to wake up early for the bus, and couldn't fall asleep while on it."
+    player "Yawn..."
+    n "And before you know it, you're slowly..."
+    n "falling... {w=1.0} "
     scene black_screen
     with fast_fade
-    "asleep...{w=1.0}\n ...{w=1.0} \n ..."
+    n "asleep...{w=1.0}\n ...{w=1.0} \n ..."
     
 
     scene street_beach_fence
     with hpunch
     u "Heya!"
-    n "{w=0.3}Huh??"
+    player "{w=0.3}Huh??"
     
     show an phiast happy 
     with hpunch
@@ -142,48 +145,48 @@ label start:
     show an phiast  unhappy 
     with hpunch
     
-    n "{w=0.1}???????"
+    player "{w=0.1}???????"
     with vpunch
-    n_thought "What the heck is this sea monster??" 
+    player_thought "What the heck is this sea monster??" 
     with vpunch
-    "You reach into you bag for-"
+    n "You reach into you bag for-"
     u "Whoa, whoa, whoa!" 
     u "I'm not gonna hurt you!"
     show an phiast unhappy:
         xalign 0.5 yalign 1.0
         linear 0.3 yalign 1.1
     u "Sorry for scaring you like that, I just thought I would walk by and say hello"
-    n_thought "What... Who is this... thing? creature?"
+    player_thought "What... Who is this... thing? creature?"
     show an phiast unhappy:
         xalign 0.5 yalign 1.1
         linear 1.5 xalign 1.5
     u "Okay, um. I'm just gonna go then. {w=0.3}  {i} Gosh this is awkward...{/i}"
     with vpunch
-    n "Wait!"
+    player "Wait!"
     
-    n_thought "They seem friendly enough, and you're actually kind of curious"
+    player_thought "They seem friendly enough, and you're actually kind of curious"
     show an phiast unhappy: 
         xalign 1.5 yalign 1.1
         linear 1.0 xalign 0.5
 
-    n "{w=0.3}...What's your name?"
+    player "{w=0.3}...What's your name?"
     u "..."
     show an phiast happy
     a "...{w=0.3}I'm An Phiast"
-    n "Sorry if I seemed unfriendly. I've just never met someone...{w=0.3} like you before."
+    player "Sorry if I seemed unfriendly. I've just never met someone...{w=0.3} like you before."
     a "Oh, I get that a lot."
     show an phiast talking happy
     a "Apology accepted!"
     show an phiast happy
     a"{w=0.3} ..."
-    "You both look at each other, awkwardly.{w=0.2} Now that you started a conversation, you're not sure what to talk about."
-    n"..."
-    n "{w=0.3}...You know, I'm here for the Animation Dingle tomorrow, and I need to kill some time before it starts tomorrow... "
-    n "{w=0.3}...do you want to walk around town a little bit?"
+    n "You both look at each other, awkwardly.{w=0.2} Now that you started a conversation, you're not sure what to talk about."
+    player"..."
+    player "{w=0.3}...You know, I'm here for the Animation Dingle tomorrow, and I need to kill some time before it starts tomorrow... "
+    player "{w=0.3}...do you want to walk around town a little bit?"
     show an phiast happy:
         xalign 0.5 yalign 1.1
         linear 0.3 yalign 1.0
-    "an phiast perks up!"
+    n "an phiast perks up!"
     a "Oh!"
     a "Now that's a coincidence!"
     show an phiast talking happy
@@ -194,9 +197,9 @@ label start:
     a "Although I can't exactly say people here are used to me..."
     show an phiast happy
     a "But yeah! I would love to just walk around town with someone!{w=0.3} ...I mean...{w=0.1} you!"
-    "ignoring that little hiccup, you continue"
-    n "Great! I actually have a-"
-    "but before you can continue your thought..."
+    n "ignoring that little hiccup, you continue"
+    player "Great! I actually have a-"
+    n "but before you can continue your thought..."
     
 
 
@@ -226,7 +229,7 @@ label start:
     f "Well, I have to look after my people, don't I?"
     f "This is my town, An Phiast.{w=0.4}  I don't want you making a mess."
     a "You do this every year, Fungie.{w=0.2} I don't need to hear your lectures."
-    "Fungie ignores him and instead, he turns to you."
+    n "Fungie ignores him and instead, he turns to you."
     f "I don't believe I've seen you around.{w=0.4} Are you new here?{w=0.4} Is he bothering you?"
 
     menu:
@@ -275,34 +278,34 @@ label start:
 
         show fungie smug at offscreen_left
         show an phiast unhappy at middle
-        "And just like that, Fungie speeds off."
+        n "And just like that, Fungie speeds off."
         a "soo...{w=0.5} that's Fungie."
         a "He...{w=0.2} doesn't like me."
-        n "What is his deal?"
+        player "What is his deal?"
         a "He's the famous dolphin of Dingle. The people love him here. He's like their mascot"
         a "He thinks I'm out to steal his title or something. I dunno."
         a "Anyways, I don't really want to talk about that right now. Let's just go somewhere else."
 
-        n_thought "What was all that about???"
-        n_thought "Fungie seems so hostile towards him, but you can't see why."
-        n_thought "What did you get yourself into..."
-        "You let it go for now, before you remember once again"
-        n "Oh yeah! here, have a look."
+        player_thought "What was all that about???"
+        player_thought "Fungie seems so hostile towards him, but you can't see why."
+        player_thought "What did you get yourself into..."
+        n "You let it go for now, before you remember once again"
+        player "Oh yeah! here, have a look."
     
         
         scene dingle map at bgspace
         with fast_fade
         
             
-        n "Our professors gave us this map. The Hotel where the Animation Dingle is taking place is a bit out of town."
+        player "Our lecturers gave us this map. The Hotel where the Animation Dingle is taking place is a bit out of town."
         scene darkened map at bgspace
         with fast_fade
-        n"for now, we could see where we wanna go. I can already see a few clear options..."
+        player"for now, we could see where we wanna go. I can already see a few clear options..."
 
         label map_screen:  
             scene darkened map at bgspace
             with fast_fade
-            "Click where you would like to go!"
+            n "Click where you would like to go!"
             call screen MapUI      # call the buttons
             
 

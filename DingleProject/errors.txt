@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 8: is not terminated with a newline. (Check strings and parenthesis.)
-    define f = Character("Fungie", window_background=Frame("gui/textboxGrey.png"), color = 
+File "game/script.rpy", line 9: invalid syntax
+    Character("Fungie", window_background=Frame("gui/textboxGrey.png"),color = '#45455c', what_font = "ArchitectsDaughter.ttf" what_size = 33)
+                                                                                                                                ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sun Jan 19 21:17:14 2025
+Mon Jan 20 13:27:02 2025

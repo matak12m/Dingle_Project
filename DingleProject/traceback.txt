@@ -1,32 +1,76 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "renpy/common/00start.rpy", line 194, in <module>
-    renpy.execute_default_statement(True)
-  File "game/screens/dialogue_screens.rpy", line 99, in execute_default
-    default quick_menu = True
-Exception: store.quick_menu is being given a default a second time.
+  File "game/script.rpy", line 271, in script
+    f "There's space for only one mascot in Dingle."
+TypeError: can't multiply sequence by non-int of type 'float'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 193, in script
-    python:
-  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00start.rpy", line 194, in <module>
-    renpy.execute_default_statement(True)
-  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 372, in execute_default_statement
-    i.execute_default(start)
-  File "game/screens/dialogue_screens.rpy", line 99, in execute_default
-    default quick_menu = True
-Exception: store.quick_menu is being given a default a second time.
+  File "game/script.rpy", line 271, in script
+    f "There's space for only one mascot in Dingle."
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2879, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 1381, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\layout.py", line 1454, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\layout.py", line 903, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\text\text.py", line 2540, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\text\text.py", line 770, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\text\text.py", line 340, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample, self.shaper, self.instance, self.axis)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\text\font.py", line 748, in get_font
+    rv = hbfont.HBFont(face, int(size * scale), bold, italics, outline, antialias, vertical, hinting, instance, axis) # @UndefinedVariable
+TypeError: can't multiply sequence by non-int of type 'float'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
-DingleProject 1.0
-Sun Jan 19 16:51:09 2025
+Dingle Visual Novel 1.0
+Mon Jan 20 13:23:20 2025

@@ -85,5 +85,5 @@ traceback.txt
 ########################################
 cache/
 saves/
- DingleProject/game/saves/
+gitDingleProject/game/saves/
 

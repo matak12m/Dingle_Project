@@ -14,13 +14,13 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("")
+define config.name = _("Dingle Visual Novel")
 
 ## A short name for the game used for executables and directories in the built
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = ""
+define build.name = "Dingle Visual Novel"
 
 ## Save directory ##############################################################
 ##
@@ -51,9 +51,9 @@ define config.version = "1.0"
 ## to the player by default. Setting one of these to False will hide the
 ## appropriate mixer.
 
-define config.has_sound = True
+define config.has_sound = False
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
@@ -120,7 +120,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 30
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
