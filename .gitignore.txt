@@ -83,7 +83,11 @@ traceback.txt
 ### Renpy ###
 # Don't track content of these folders #
 ########################################
-cache/
-saves/
-gitDingleProject/game/saves/
+*.rpyc
+*.rpymc
+game/cache/
+game/saves/
+log.txt
+traceback.txt
+errors.txt
 
