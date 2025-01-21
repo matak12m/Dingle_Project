@@ -56,11 +56,12 @@ screen MapUI:
         hover "map/tourist office overlay.png"
         action Jump("tourist_pressed")
 
-    imagebutton:
-        xpos 96
-        ypos 65
-        idle "map/house1_idle.png"
-        hover "map/house1_hover.png"
-        action Jump("house5_pressed")
+    if (TimeProgress > 3):
+        imagebutton:
+            xpos 96
+            ypos 65
+            idle "map/house1_idle.png"
+            hover "map/house1_hover.png"
+            action Jump("house5_pressed")
 
         

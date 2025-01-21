@@ -83,14 +83,15 @@ style button_text:
     hover_color '#000000'
     ## The color used for a text button when it is selected but not focused. A
     ## button is selected if it is the current screen or preference value.
-    selected_color '#ffffff'
+    selected_color '#f3fdff'
     ## The color used for a text button when it cannot be selected.
-    insensitive_color '#888888'
+    insensitive_color '#444444'
 
 style label_text:
     is gui_text
     size 36
-    color '#000000'
+    color '#2c394d'
+    
 
 
 style bar:

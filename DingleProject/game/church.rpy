@@ -5,18 +5,18 @@ label church_pressed:
     scene dingle town at bgspace
     "Church of Mary pressed! the park next to it is really peaceful."
 
-    player "You step into the garden of St. Mary's church, greeted by scents of lavender and
+    n "You step into the garden of St. Mary's church, greeted by scents of lavender and
     rosemary."
 
-    player "As you round a corner, you spot a small statue on a pedestal - it's a statue of Fungie
+    n "As you round a corner, you spot a small statue on a pedestal - it's a statue of Fungie
     leaping over a small boat."
 
-    player "You take in the sight before moving on through the garden. However, your elbow grazes
+    n "You take in the sight before moving on through the garden. However, your elbow grazes
     the pedestal, and the statue tumbles to the ground with a loud smack."
 
     a "Uh oh, Fungie won't be happy with that."
 
-    player "An Phiast enters, a cheeky grin on his face."
+    n "An Phiast enters, a cheeky grin on his face."
 
     player "I didn't mean to, I just-"
     a "*An Phiast waves off your apology* It's alright, happens more than you think."
@@ -48,7 +48,7 @@ label church_pressed:
         a "*With a smirk* Right? I'd love to have a grand statue near the bay. Give it a grand pose,
         something like this!"
 
-        player "He stands on his tippy toes and flexes his arms in the air on both sides. You can't help but
+        n "He stands on his tippy toes and flexes his arms in the air on both sides. You can't help but
         laugh."
         jump after_choice_church_1
     
@@ -69,7 +69,7 @@ label church_pressed:
 
     label after_choice_church_1:
 
-        player "The conversation lingers as you both look at the statue on the floor."
+        n "The conversation lingers as you both look at the statue on the floor."
 
         c "What's this? Another tragic accident? *St. Cuan picks up the statue and observes the
         large, jagged crack at the base*."
@@ -81,48 +81,58 @@ label church_pressed:
 
         c "I'll take this to the 'shop' for 'repairs'."
 
-        player "As St. Cuan walks away, you watch him casually throw the statue into a clump of bushes,
+        n "As St. Cuan walks away, you watch him casually throw the statue into a clump of bushes,
         swallowing it whole."
 
         player "Does he not like Fungie?"
 
-        a "*Pause* The town can be very divided on their choice of mascot. He's one of the few who
+        a "... {w=1.0} The town can be very divided on their choice of mascot. He's one of the few who
         really knows what happened back then when we were…"
 
-        player "He trails off, avoiding your gaze"
-        
+        n "He trails off, avoiding your gaze"
+
         player "When you were what?"
 
+    if (APRelationship > 1):
+        jump church_Trust
+    else:
+        jump church_NoTrust
 
+    label church_Trust:
+        a "We uh… we used to be really close friends a while ago."
+        player "What happened?"
+        a "Fungie has a way of telling stories, people love them. Once they're out there, well… it's
+        hard to convince people to believe otherwise."
+        n "You pause, encouraging him to continue"
+        a "Eventually, I stopped being the 'misunderstood monster' and just became, well… the
+        monster."
+        a "But hey, maybe that's all I ever was to begin with."
+    
+        jump after_church_trust_1
 
-
-
-    # This reply could depend on how much he trusts you
-    # ***************************************************************************
-    # *******
-    # Trust:
-    # a "We uh… we used to be really close friends a while ago."
-    # player "What happened?"
-    # a "Fungie has a way of telling stories, people love them. Once they're out there, well… it's
-    # hard to convince people to believe otherwise."
-    # player "You pause, encouraging him to continue"
-    # a "Eventually, I stopped being the 'misunderstood monster' and just became, well… the
-    # monster."
-    # a "But hey, maybe that's all I ever was to begin with."
-    # No Trust:
-    # a "I'd rather not get into it… Let's just say things weren't always this way."
-    # ***************************************************************************
-    # *******
-    # player "But-"
-    # c "Come on you two, I'm locking up the church now. Unless you'd rather sleep out in the
-    # garden?"
-    # a "I, uh… guess it's time for me to head out. It's been nice talking to you."
-    # player "You watch An Phiast hesitate before he leaves, as if he's going to say more, but he simply
-    # gives a small nod instead."
-    # player "St. Cuan nods at you, encouraging you to head out too. You nod back and make your way
-    # out of the church."
+    label church_NoTrust:
+        a "I'd rather not get into it… Let's just say things weren't always this way."
         
+        jump after_church_trust_1
 
 
-    jump after_house_choice
+
+    label after_church_trust_1:
+
+
+        player "But-"
+        c "Come on you two, I'm locking up the church now. Unless you'd rather sleep out in the
+        garden?"
+        a "I, uh… guess it's time for me to head out. It's been nice talking to you."
+        n "You watch An Phiast hesitate before he leaves, as if he's going to say more, but he simply
+        gives a small nod instead."
+        n "St. Cuan nods at you, encouraging you to head out too. You nod back and make your way
+        out of the church."
+        player "An Phiast, wait!"
+        show an phiast unhappy
+        n "...do you wanna go somewhere else, to take you mind off of things?"
+        a "...sure."
+
+
+        jump after_house_choice
 

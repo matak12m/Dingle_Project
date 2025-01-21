@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 9: invalid syntax
-    Character("Fungie", window_background=Frame("gui/textboxGrey.png"),color = '#45455c', what_font = "ArchitectsDaughter.ttf" what_size = 33)
-                                                                                                                                ^
+File "game/custom_screens.rpy", line 59: reached end of line when expecting ':'.
+    if (TimeProgress > 3)
+                         ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Mon Jan 20 13:27:02 2025
+Mon Jan 20 13:53:45 2025

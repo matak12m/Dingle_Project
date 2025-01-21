@@ -16,7 +16,7 @@ screen history():
     ## Avoid predicting this screen, as it can be very large.
     predict False
 
-    add HBox(Transform("#292835", xsize=350), "#21212db2") # The background; can be whatever
+    add HBox(Transform("#6A8EAE", xsize=350), "#9BD1E5") # The background; can be whatever
 
     use game_menu(_("History"))
 

@@ -9,7 +9,7 @@ define a = Character("An Phiast", window_background=Frame("gui/textboxGreen.png"
 define f = Character("Fungie", window_background=Frame("gui/textboxGrey.png"),color = '#45455c', what_font = "ArchitectsDaughter.ttf" ,what_size = 33)
 define c = Character("St. Cuan", window_background=Frame("gui/textbox.png"))
 define player = Character("You", window_background=Frame("gui/textbox.png"))
-define player_thought = Character("You", what_italic = True, window_background=Frame("gui/thoughtbox.png"))
+define n = Character("", what_italic = True, window_background=Frame("gui/thoughtbox.png"))
 define u = Character("???", window_background=Frame("gui/textbox.png"))
 define n = Character("", window_background=Frame("gui/thoughtbox.png"))
 define fast_fade = Dissolve(0.5, window_background=Frame("gui/textbox.png"))
@@ -36,6 +36,11 @@ define FRelationship = 0
 define TimeProgress = 0
 
 define FungieTime = "false"
+
+define WentToChurch = "false"
+define WentToBay = "false"
+define WentToTown = "false"
+define WentToTouristCenter = "false"
 
 
 
@@ -104,15 +109,15 @@ label start:
     with fast_fade
 
     n "While on the bus, you start to think to yourself."
-    player_thought"A bit of a strange place to get together. It's on the exact opposite coast from Dublin, in the middle of the countryside."
-    player_thought"how did all the animators from america get there?"
-    player_thought"we're lucky the college ordered this bus, otherwise it would be impossible"
-    player_thought"Too bad my friends couldn't come. There's my classmates, sure, but I've never really talked to them... "
-    player_thought"hopefully it won't get too lonely."
+    n "A bit of a strange place to get together. It's on the exact opposite coast from Dublin, in the middle of the countryside."
+    n "how did all the animators from america get there?"
+    n "we're lucky the college ordered this bus, otherwise it would be impossible"
+    n "Too bad my friends couldn't come. There's my classmates, sure, but I've never really talked to them... "
+    n "hopefully it won't get too lonely."
 
-    player_thought"..."
+    n "..."
 
-    player_thought"at least the views are lovely."
+    n "at least the views are lovely."
 
     scene dingle town
     with   fast_fade
@@ -127,7 +132,7 @@ label start:
     with fast_fade
 
     n "You wander around, mostly following the view"
-    player_thought"The bay looks wonderful."
+    n "The bay looks wonderful."
     n "You sit in the grass for a little bit, taking in the view."
     n "You didn't really get to sleep much, you had to wake up early for the bus, and couldn't fall asleep while on it."
     player "Yawn..."
@@ -152,7 +157,7 @@ label start:
     
     player "{w=0.1}???????"
     with vpunch
-    player_thought "What the heck is this sea monster??" 
+    n  "What the heck is this sea monster??" 
     with vpunch
     n "You reach into you bag for-"
     u "Whoa, whoa, whoa!" 
@@ -161,7 +166,7 @@ label start:
         xalign 0.5 yalign 1.0
         linear 0.3 yalign 1.1
     u "Sorry for scaring you like that, I just thought I would walk by and say hello"
-    player_thought "What... Who is this... thing? creature?"
+    n  "What... Who is this... thing? creature?"
     show an phiast unhappy:
         xalign 0.5 yalign 1.1
         linear 1.5 xalign 1.5
@@ -169,7 +174,7 @@ label start:
     with vpunch
     player "Wait!"
     
-    player_thought "They seem friendly enough, and you're actually kind of curious"
+    n  "They seem friendly enough, and you're actually kind of curious"
     show an phiast unhappy: 
         xalign 1.5 yalign 1.1
         linear 1.0 xalign 0.5
@@ -291,11 +296,11 @@ label start:
         a "He thinks I'm out to steal his title or something. I dunno."
         a "Anyways, I don't really want to talk about that right now. Let's just go somewhere else."
 
-        player_thought "What was all that about???"
-        player_thought "Fungie seems so hostile towards him, but you can't see why."
-        player_thought "What did you get yourself into..."
+        n "What was all that about???"
+        n "Fungie seems so hostile towards him, but you can't see why."
+        n "What did you get yourself into..."
         n "You let it go for now, before you remember once again"
-        player "Oh yeah! here, have a look."
+        player "Oh yeah! {w=0.3} here, have a look."
     
         
         scene dingle map at bgspace
