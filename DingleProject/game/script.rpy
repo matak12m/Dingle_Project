@@ -33,6 +33,11 @@ define APRelationship = 0
 
 define FRelationship = 0
 
+define TimeProgress = 0
+
+define FungieTime = "false"
+
+
 
 
 transform middle:
