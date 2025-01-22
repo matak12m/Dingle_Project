@@ -60,10 +60,10 @@ label bay_pressed:
     label after_choice_bay_1:
         scene bay sea view at bgspace
         with fast_fade
-        "You both set up your fishing rods and take in the view of the sea in front of you."
-        "An Phiast seems happy just watching the view, but you can't help but start a conversation."
-        "After all, you still don't know much about him, and this seems like the perfect opportunity."
-        n_thought"..."
+        n "You both set up your fishing rods and take in the view of the sea in front of you."
+        n "An Phiast seems happy just watching the view, but you can't help but start a conversation."
+        n "After all, you still don't know much about him, and this seems like the perfect opportunity."
+        n"..."
         menu:
 
             "What do you usually do when you wait for a bite?":
@@ -84,23 +84,23 @@ label bay_pressed:
             xalign 0.65 yalign 1.0
         with fast_fade
 
-        a"oh?"
+        a"Oh?"
         a"..."
         a"I usually just think about stuff..."
         a"It's really calming, you know? I get a chance to sort through my thoughts, or think about my other hobbies."
-        n "Other hobbies? like what?"
+        player "Other hobbies? like what?"
         a"Well, you're probably not gonna be surprised when I say this, but..."
         show an phiast talking happy
         a"I'm a bit of an artist."
         a"I like to draw, i even tried animating a little, but that's not really my specialty."
         show an phiast happy
         a"That would be writing. I even brought a notebook with me!"
-        n"Do you usually write while fishing?"
+        player "Do you usually write while fishing?"
         a"Yeah! it's great for that. I just didn't want to start scribbling and being in my own little bubble while I'm here with you, {w=0.2} y'know?"
-        "An phiast stares into your eyes for a second, before turning back to the sea."
+        n "An phiast stares into your eyes for a second, before turning back to the sea."
         scene bay sea view at bgspace
-        "..."
-        "This is great."
+        n "..."
+        n "This is great."
 
 
         jump after_choice_bay_2
@@ -112,7 +112,7 @@ label bay_pressed:
         show an phiast unhappy:
             xalign 0.65 yalign 1.0
         with fast_fade
-        a"oh?"
+        a "Oh?"
         a "I suppose you want to know more about why we're fighting."
         a "When I first came into town, it was different."
         a "It was same as this year. I came a few days before the Animation Dingle, and we met."
@@ -130,13 +130,13 @@ label bay_pressed:
         show an phiast unhappy
         a "But I think he saw it as an attack."
         a "I know how much Dingle means to him. He used to also be an outcast, until he came here. {w=0.5} It means a lot to him."
-        show an phiast angry
-        a "But that doesn't mean he can push me around..."
+        # show an phiast angry
+        # a "But that doesn't mean he can push me around..."
         show an phiast unhappy
         a "And to think we could have been friends if it wasn't for that."
         "An Phiast pauses."
         "You get the feeling like he never had the chance to tell this to anyone."
-        n "I'm sorry that's how things turned out between you two."
+        player "I'm sorry that's how things turned out between you two."
         a "It's alright."
         "You both turn back towards the sea."
         scene bay sea view at bgspace
@@ -149,15 +149,26 @@ label bay_pressed:
         jump after_choice_bay_2
 
     label choice_bay_2_fish:
-
-        ""
+        show an phiast happy
+        a "Oh?"
+        a "Where to even start... {w=0.5}There's all the standard ocean fish, like cods, lings, and pollocks."
+        a "What's more interesting is what fish people eat here!"
+        a "One of the fish and chips spots makes rays, and even monkfish!"
+        show an phiast talking happy
+        a "Don't know if you've ever seen a monkfish, but they look weird. You definitely wouldn't like its ugly face on your plate!"
+        show an phiast happy
+        a "and still, they manage to make it delicious."
         
         jump after_choice_bay_2
 
 
     label choice_bay_2_silent:
 
-        "silent convo TBA"
+        n "you see no reason to spoil the moment with words."
+        n "Hanging out with An Phiast can be hectic. {w=1.0} Not in a bad way, but still. A peaceful break like this is welcome."
+        show an phiast happy
+        n "He seems to be content. Despite what he said about the excitement of getting a catch, it's cler he likes the wait just as much."
+        n "..."
 
         jump after_choice_bay_2
 
@@ -171,7 +182,7 @@ label bay_pressed:
         a "I think I see Fungie in the water..."
         a "I'd rather not talk to him right now. Do you want to go somewhere else before he sees us?"
         "You pull up you town map again."
-        n "Let's see..."
+        player "Let's see..."
         
     jump after_house_choice
 

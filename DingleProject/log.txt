@@ -12,3 +12,708 @@ File "game/custom_screens.rpy", line 28: the focus_mask keyword argument was not
     imagebutton auto "gui/bay_%s.png" xpos 130 ypos 575 focus_mask
                                                                   ^
 DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.19s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 50.02s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.16s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\idaduser\\AppData\\Roaming/RenPy/backups\\DingleProject':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.13s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+    call screen MapUI      # call the buttons
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 28, in execute
+    imagebutton auto "gui/bay_%s.png" xpos 130 ypos 575 focus_mask True action Jump("bay_pressed")
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 975, in _imagebutton
+    idle = choice(idle, idle_image, "idle", required=True)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 969, in choice
+    raise Exception("Imagebutton does not have a %s image. (auto=%r)." % (name, auto))
+Exception: Imagebutton does not have a idle image. (auto='gui/bay_%s.png').
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+    call screen MapUI      # call the buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 28, in execute
+    imagebutton auto "gui/bay_%s.png" xpos 130 ypos 575 focus_mask True action Jump("bay_pressed")
+Exception: Imagebutton does not have a idle image. (auto='gui/bay_%s.png').
+Resetting cache.
+Early init took 182.92s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.00s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.13s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+    call screen MapUI      # call the buttons
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 28, in execute
+    imagebutton auto "gui/bay_%s.png" xpos 130 ypos 575 focus_mask True action Jump("bay_pressed")
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 975, in _imagebutton
+    idle = choice(idle, idle_image, "idle", required=True)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 969, in choice
+    raise Exception("Imagebutton does not have a %s image. (auto=%r)." % (name, auto))
+Exception: Imagebutton does not have a idle image. (auto='gui/bay_%s.png').
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+    call screen MapUI      # call the buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 28, in execute
+    imagebutton auto "gui/bay_%s.png" xpos 130 ypos 575 focus_mask True action Jump("bay_pressed")
+Exception: Imagebutton does not have a idle image. (auto='gui/bay_%s.png').
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+    call screen MapUI      # call the buttons
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 28, in execute
+    imagebutton auto "gui/bay_%s.png" xpos 130 ypos 575 focus_mask True action Jump("bay_pressed")
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 975, in _imagebutton
+    idle = choice(idle, idle_image, "idle", required=True)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 969, in choice
+    raise Exception("Imagebutton does not have a %s image. (auto=%r)." % (name, auto))
+Exception: Imagebutton does not have a idle image. (auto='gui/bay_%s.png').
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+    call screen MapUI      # call the buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 28, in execute
+    imagebutton auto "gui/bay_%s.png" xpos 130 ypos 575 focus_mask True action Jump("bay_pressed")
+Exception: Imagebutton does not have a idle image. (auto='gui/bay_%s.png').
+
+Full traceback:
+  File "game/script.rpy", line 319, in script
+    call screen MapUI      # call the buttons
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 28, in execute
+    imagebutton auto "gui/bay_%s.png" xpos 130 ypos 575 focus_mask True action Jump("bay_pressed")
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 975, in _imagebutton
+    idle = choice(idle, idle_image, "idle", required=True)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 969, in choice
+    raise Exception("Imagebutton does not have a %s image. (auto=%r)." % (name, auto))
+Exception: Imagebutton does not have a idle image. (auto='gui/bay_%s.png').
+
+While running game code:
+  File "game/script.rpy", line 319, in script
+    call screen MapUI      # call the buttons
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 25, in execute
+    screen MapUI:
+  File "game/custom_screens.rpy", line 28, in execute
+    imagebutton auto "gui/bay_%s.png" xpos 130 ypos 575 focus_mask True action Jump("bay_pressed")
+Exception: Imagebutton does not have a idle image. (auto='gui/bay_%s.png').
+Resetting cache.
+Early init took 198.42s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\idaduser\\AppData\\Roaming/RenPy/backups\\DingleProject':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.12s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 288.55s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.00s
+Loading persistent took 0.00s
+
+File "game/custom_screens.rpy", line 29: the auto keyword argument was not given a value.
+    auto
+        ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 294.68s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.00s
+Loading persistent took 0.00s
+
+File "game/custom_screens.rpy", line 33: the focus_mask keyword argument was not given a value.
+    focus_mask
+              ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 296.17s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/custom_screens.rpy", line 33: the focus_mask keyword argument was not given a value.
+    focus_mask
+              ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 297.10s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/custom_screens.rpy", line 33: the focus_mask keyword argument was not given a value.
+    focus_mask
+              ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.16s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 303.53s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+
+File "game/custom_screens.rpy", line 33: the focus_mask keyword argument was not given a value.
+    focus_mask
+              ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 309.63s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\idaduser\\AppData\\Roaming/RenPy/backups\\DingleProject':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.13s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 451.98s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\idaduser\\AppData\\Roaming/RenPy/backups\\DingleProject':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.12s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 699.60s
+Loading error handling took 0.01s
+Loading script took 0.06s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.02s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.12s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Interface start took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 717.94s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\idaduser\\AppData\\Roaming/RenPy/backups\\DingleProject':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.12s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
+Resetting cache.
+Early init took 728.70s
+Loading error handling took 0.01s
+Loading script took 0.07s
+Loading save slot metadata took 0.01s
+Loading persistent took 0.00s
+Running init code took 0.02s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\idaduser\\AppData\\Roaming/RenPy/backups\\DingleProject':
+Dump and make backups took 0.03s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.13s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Interface start took 0.02s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 3440, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'NVIDIA Corporation'"
+Renderer: b'NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2'
+Version: b'4.6.0 NVIDIA 556.12'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1422, 800) drawable=(1422, 800)
+Maximum texture size: 4096x4096
