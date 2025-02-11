@@ -2,7 +2,8 @@
 # TBA: final dialogue tree responses
 
 
-
+#xalign 0.5 yalign 1.0
+#linear 0.3 yalign 1.1
 
 
 
