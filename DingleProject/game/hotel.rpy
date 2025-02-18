@@ -13,20 +13,21 @@ label hotel_pressed_early:
 
 label hotel_pressed_ontime:
     scene dingle town at bgspace
-    player "The hotel lobby is buzzing with energy. Posters and tote bags of An Phiast in various animated styles line the walls and tables. Banners hang from the ceiling, featuring An Phiast's beaming smile."
+    n "The hotel lobby is buzzing with energy. Posters and tote bags of An Phiast in various animated styles line the walls and tables. Banners hang from the ceiling, featuring An Phiast's beaming smile."
 
-    player "You make your way past a crowd gathered around a life-sized cutout of An Phiast, stopping at a display case showcasing multiple animation awards."
+    n "You make your way past a crowd gathered around a life-sized cutout of An Phiast, stopping at a display case showcasing multiple animation awards."
 
     f "Well, isn't this charming…"
 
-    player "Fungie's voice drips with forced enthusiasm as he stands beside you, his gaze sweeping over a display of awards."
+    n "Fungie's voice drips with forced enthusiasm as he stands beside you, his gaze sweeping over a display of awards."
 
     f "A real tribute to Dingle's finest, isn't it?"
-    player "There's something sharp in his tone, but his expression is unreadable. You follow his gaze to the lowest shelf of the awards cabinet to a familiar stone mascot."
+    n "There's something sharp in his tone, but his expression is unreadable. You follow his gaze to the lowest shelf of the awards cabinet to a familiar stone mascot."
 
-    player "What was that award for? *You motion towards the award*"
+    player "What was that award for?"
 
-    f "Ah… *He shifts uncomfortably* It was one of the first awards ever given by the festival."
+    n "He shifts uncomfortably"
+    f "Ah… It was one of the first awards ever given by the festival."
 
     player "You were part of the festival?"
 
@@ -49,6 +50,8 @@ label hotel_pressed_ontime:
 
     label choice_hotel_1_notfair:
 
+        $ FRelationship+=1;
+
         f "Oh, look at you, standing up for me."
 
         player "His trademark smirk softens a little, and for a moment, there's almost something genuine in his expression."
@@ -67,18 +70,21 @@ label hotel_pressed_ontime:
 
         f "It did."
 
-        player "For the first time, there's no sarcasm - just honesty. But just as quickly as it appears, it's gone, buried beneath a chuckle."
+        n "For the first time, there's no sarcasm - just honesty. But just as quickly as it appears, it's gone, buried beneath a frown."
 
         f "But hey, things change, right? That's life."
         jump after_hotel_choice_1
 
 
     label after_hotel_choice_1:
-        player "Before you can say anything else, a sea of people storms its way through the lobby, separating you and Fungie."
 
-        player "You try call for him, but he's slinked his way back into the crowd, leaving you alone."
 
-        player "Eager to escape the crowd, you slip away into an open conservatory, taking in the views."
+
+        n "He turns away from you, and before you can say anything else, a sea of people storms its way through the lobby, separating you and Fungie."
+
+        n "You try call for him, but he's slinked his way back into the crowd, leaving you alone."
+
+        n "Eager to escape the crowd, you slip away into an open conservatory, taking in the views."
 
         a "Escaping the crowd?"
 
@@ -126,7 +132,7 @@ label hotel_pressed_ontime:
 
         a "Well he's not exactly forgotten, is he?"
 
-        player "There's a stern bitterness in his tone."
+        n "There's a stern bitterness in his tone."
         a "People remember what they want to remember."
         jump after_hotel_choice_2
 
@@ -144,26 +150,26 @@ label hotel_pressed_ontime:
 
         a "I'll be down in a minute. *Sighs* Enjoy it while you can. Things don't stay the same forever."
 
-        player "With that, he turns back to admire the view, lost in thought."
+        n "With that, he turns back to admire the view, lost in thought."
 
-        player "You hesitate, sensing there's more to be said, but eventually you step away back into the busy lobby."
-
-
+        n "You hesitate, sensing there's more to be said, but eventually you step away back into the busy lobby."
 
 
-    if APRelationship >= 1 and FRelationship >= 1:
-        "both An Phiast and Fungie seem to like you."
-    elif APRelationship >= 1 :
-        "An Phiast seems to like you."
 
-    elif FRelationship >= 1 :
-        "Fungie seems to like you!"
 
-    if APRelationship > 1 or FRelationship > 1:
-        "bug report."
+    # if APRelationship >= 1 and FRelationship >= 1:
+    #     "both An Phiast and Fungie seem to like you."
+    # elif APRelationship >= 1 :
+    #     "An Phiast seems to like you."
 
-    "This is a test button. back to the map you go!"
-    jump map_screen
+    # elif FRelationship >= 1 :
+    #     "Fungie seems to like you!"
+
+    # if APRelationship > 1 or FRelationship > 1:
+    #     "bug report."
+
+    # "This is a test button. back to the map you go!"
+    jump epilogue
 
 
 

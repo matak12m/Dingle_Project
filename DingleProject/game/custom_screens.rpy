@@ -27,7 +27,7 @@ screen gameUI:
 screen MapUI:
     
 
-    imagebutton:
+    imagebutton  focus_mask True:
         xpos 50
         ypos 445
         idle "gui/map/bay button.png"
@@ -35,9 +35,15 @@ screen MapUI:
       
         action Jump("bay_pressed")
 
-    
+    imagebutton  focus_mask True:
+        xpos 680
+        ypos 260
+
+        idle "gui/map/town button.png"
+        hover "gui/map/town button hover.png"
+        action Jump("town_pressed")    
         
-    imagebutton:
+    imagebutton  focus_mask True:
         xpos 576
         ypos 130
         
@@ -45,15 +51,9 @@ screen MapUI:
         hover "gui/map/church button hover.png"
         action Jump("church_pressed")
 
-    imagebutton:
-        xpos 680
-        ypos 255
 
-        idle "gui/map/town button.png"
-        hover "gui/map/town button hover.png"
-        action Jump("town_pressed")
 
-    imagebutton:
+    imagebutton  focus_mask True:
         xpos 470
         ypos 358
         
@@ -63,14 +63,14 @@ screen MapUI:
         action Jump("tourist_pressed")
 
     if (TimeProgress > 3):
-        imagebutton:
+        imagebutton  focus_mask True:
             xpos 1490
             ypos 515
             idle "gui/map/hotel button.png"
             hover "gui/map/hotel button hover.png"
             action Jump("hotel_pressed_ontime")
     else:
-        imagebutton:
+        imagebutton  focus_mask True:
             xpos 1490
             ypos 515
             idle "gui/map/hotel button.png"
