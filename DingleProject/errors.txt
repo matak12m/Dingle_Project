@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/custom_screens.rpy", line 33: the focus_mask keyword argument was not given a value.
-    focus_mask
-              ^
+File "game/custom_screens.rpy", line 75: Indentation mismatch.
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Jan 22 13:31:12 2025
+Tue Feb 18 16:15:48 2025

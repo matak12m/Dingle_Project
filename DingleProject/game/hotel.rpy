@@ -1,7 +1,17 @@
-﻿# town center script
+﻿# hotel script
+
+label hotel_pressed_early:
+    
+    player "This is the hotel where Animation Dingle will take place. It hasn't started yet..."
+    player "Let's go somewhere else for now."
+    jump map_screen
 
 
-label house5_pressed:
+
+
+
+
+label hotel_pressed_ontime:
     scene dingle town at bgspace
     player "The hotel lobby is buzzing with energy. Posters and tote bags of An Phiast in various animated styles line the walls and tables. Banners hang from the ceiling, featuring An Phiast's beaming smile."
 
@@ -26,7 +36,7 @@ label house5_pressed:
 
     f "*Scoffs* Good question. Let's just say… things didn't exactly go to script." 
 
-    F "Still, who can blame them? *He gestures towards the crowd* Everyone loves a hero."
+    f "Still, who can blame them? *He gestures towards the crowd* Everyone loves a hero."
 
     menu:
 
@@ -120,7 +130,7 @@ label house5_pressed:
         a "People remember what they want to remember."
         jump after_hotel_choice_2
 
-    label choice_hotel_2_youvedonealot:
+    label choice_hotel_2_moretothis:
 
         a "There always is something more to things isn't there? *Chuckles*"
         jump after_hotel_choice_2

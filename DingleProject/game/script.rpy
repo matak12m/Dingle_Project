@@ -315,7 +315,6 @@ label start:
         label map_screen:  
             scene darkened map at bgspace
             with fast_fade
-            n "Click where you would like to go!"
             call screen MapUI      # call the buttons
             
 

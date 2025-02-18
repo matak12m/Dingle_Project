@@ -22,49 +22,58 @@ screen gameUI:
 #  this defines the map and its buttons. 
 # action == function
 
+# 38 477, 511 380, 621 167, 741 290, 1553 559
+
 screen MapUI:
     
 
     imagebutton:
-        xpos 130
-        ypos 575
-        idle "gui/map/bay_idle.png"
-        hover "gui/map/bay_hover.png"
+        xpos 50
+        ypos 445
+        idle "gui/map/bay button.png"
+        hover "gui/map/bay button hover.png"
       
         action Jump("bay_pressed")
 
     
         
     imagebutton:
-        xpos 980
-        ypos 368
-        idle "gui/map/church_idle.png"
-        hover "gui/map/church_hover.png"
+        xpos 576
+        ypos 130
+        
+        idle "gui/map/church button.png"
+        hover "gui/map/church button hover.png"
         action Jump("church_pressed")
 
     imagebutton:
-        xpos 1085
-        ypos 360
-        
-        idle "gui/map/town_idle.png"
-        hover "gui/map/town_hover.png"
+        xpos 680
+        ypos 255
+
+        idle "gui/map/town button.png"
+        hover "gui/map/town button hover.png"
         action Jump("town_pressed")
 
     imagebutton:
-        xpos 778
-        ypos 587
+        xpos 470
+        ypos 358
         
 
-        idle "gui/map/tourist_idle.png"
-        hover "gui/map/tourist_hover.png"
+        idle "gui/map/tourist button.png"
+        hover "gui/map/tourist button hover.png"
         action Jump("tourist_pressed")
 
     if (TimeProgress > 3):
         imagebutton:
-            xpos 96
-            ypos 65
-            idle "gui/map/house1_idle.png"
-            hover "gui/map/house1_hover.png"
-            action Jump("house5_pressed")
-
+            xpos 1490
+            ypos 515
+            idle "gui/map/hotel button.png"
+            hover "gui/map/hotel button hover.png"
+            action Jump("hotel_pressed_ontime")
+    else:
+        imagebutton:
+            xpos 1490
+            ypos 515
+            idle "gui/map/hotel button.png"
+            hover "gui/map/hotel button hover.png"
+            action Jump("hotel_pressed_early")
         
