@@ -80,7 +80,7 @@ style button_text:
     ## The color used for a text button when it is neither selected nor hovered.
     idle_color '#000000'
     ## The color that is used for buttons and bars that are hovered.
-    hover_color '#000000'
+    hover_color '#ffffff'
     ## The color used for a text button when it is selected but not focused. A
     ## button is selected if it is the current screen or preference value.
     selected_color '#f3fdff'

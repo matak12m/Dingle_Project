@@ -17,15 +17,15 @@ screen game_menu(title):
         xpos 60 yalign 0.5
         spacing 6
 
-        if main_menu:
+        # if main_menu:
 
-            textbutton _("Start") action Start()
+        #     textbutton _("Start") action Start()
 
-        else:
+        #else:
 
-            textbutton _("History") action ShowMenu("history")
+        textbutton _("History") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+        textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
 

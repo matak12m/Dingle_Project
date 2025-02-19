@@ -7,7 +7,7 @@ label church_pressed:
     if(WentToChurch==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
     else:
-        jump church_scene;
+        jump church_scene
     
 
 
@@ -69,7 +69,7 @@ label church_scene:
     
 
     label choice_church_APStatue:
-        $ APRelationship+=1;;
+        $ APRelationship+=1;
         player "I mean, you're a mascot too, right?"
         show an phiast happy
         a "*With a smirk*\nRight? I'd love to have a grand statue near the bay. Give it a grand pose,

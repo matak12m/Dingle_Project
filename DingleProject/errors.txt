@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/epilogue.rpy", line 118: expected ':' not found.
-    label choice_epilogue_fungie
-                                ^
-
-File "game/epilogue.rpy", line 190: reached end of line when expecting ':'.
-    if (APRelationship > 3 and FRelationship > 3)
-                                                 ^
-
-File "game/epilogue.rpy", line 254: expected statement.
+File "game/screens/game_menu.rpy", line 24: 'else' is not a keyword argument or valid child of the vbox statement.
     else:
         ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Tue Feb 18 17:16:59 2025
+Wed Feb 19 18:05:08 2025

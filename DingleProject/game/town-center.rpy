@@ -5,7 +5,7 @@ label town_pressed:
     if(WentToTown==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
     else:
-        jump town_scene;
+        jump town_scene
     
 
 
@@ -49,7 +49,7 @@ label town_scene:
 
     label choice_town_NotFair:
 
-        APRelationship +=1;
+        $ APRelationship +=1;
     
         n "Your voice cuts through the laughter. Both An Phiast and Fungie are surprised."
         f "Oh? I didn't realise you two were so… close."

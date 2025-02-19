@@ -10,7 +10,7 @@ label bay_pressed:
     if(WentToBay==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
     else:
-        jump bay_scene;
+        jump bay_scene
     
 
 
@@ -172,7 +172,7 @@ label bay_scene:
 
 
     label choice_bay_2_silent:
-        APRelationship+=1;
+        $ APRelationship+=1;
         n "you see no reason to spoil the moment with words."
         n "Hanging out with An Phiast can be hectic. {w=1.0} Not in a bad way, but still. A peaceful break like this is welcome."
         show an phiast happy

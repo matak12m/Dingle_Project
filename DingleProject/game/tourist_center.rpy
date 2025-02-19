@@ -5,7 +5,7 @@ label tourist_pressed:
     if(WentToTouristCenter==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
     else:
-        jump tourist_scene;
+        jump tourist_scene
     
 
 

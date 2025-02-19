@@ -18,7 +18,7 @@ screen about():
 
     tag menu
 
-    add "#6a8eaec2" # The background; can be whatever
+    add HBox(Transform("#9BD1E5", xsize=350), "#6A8EAE") # The background; can be whatever
 
     use game_menu(_("About"))
 
