@@ -18,7 +18,7 @@ label church_scene:
     pause 1.0
     show street_monastery_garden_spiral at bgspace with slowFlash
 
-    
+    play music "audio/BirdsChirpingLong.mp3" fadeout 1
 
     n "You step into the garden of St. Mary's church, greeted by scents of lavender and
     rosemary."
@@ -32,10 +32,10 @@ label church_scene:
     # {done} will remove the line from the history buffer, so it won't come up when using BACK
     n "You take in the sight before moving on through the garden.{w=0.2} However, your elbow grazes
     the pedestal, and the statue tumbles to the ground with a loud{nw}{done}"
-
+    play sound "audio/falling sound.mp3"
     n "You take in the sight before moving on through the garden. However, your elbow grazes
     the pedestal, and the statue tumbles to the ground with a loud{fast} {size=+4}{shader=jitter:u__jitter=0.0, 3.0}smack{/shader}." with vpunch
-
+    
     a "Uh oh, Fungie won't be happy with that."
     show an phiast happy with moveinright:
         xalign 0.8 yalign 1.0
@@ -110,8 +110,8 @@ label church_scene:
 
     
     label choice_church_SoMany:
-        $APRelationship+=1;
-        $FRelationship-=1;
+        $ APRelationship+=1;
+        $ FRelationship-=1;
         player "It's clear he's done a lot for this town...{w=0.3}\nbut that's a lot of
             statues"
         show an phiast talking happy
@@ -123,11 +123,11 @@ label church_scene:
     label after_choice_church_1:
         show an phiast happy:
             linear 0.2 xalign 0.8
-
+        play sound "audio/footsteps.mp3"
         n "The conversation lingers as someone else enters the park."
 
         n "He looks like a priest?"
-
+        stop sound fadeout 1.0
         show an phiast unhappy:
             linear 0.4 xalign 1.5
 
@@ -250,8 +250,9 @@ label church_scene:
 
         player "...do you wanna go somewhere else, to take your mind off of things?"
         a "{cps=*0.1}...{/cps}{w=0.5}\nsure."
-        $TimeProgress+=1;
-        $WentToChurch=True;
+        stop music fadeout 1
+        $ TimeProgress+=1;
+        $ WentToChurch=True;
 
         jump after_house_choice
 

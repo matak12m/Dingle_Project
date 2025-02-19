@@ -13,6 +13,8 @@ label hotel_pressed_early:
 
 label hotel_pressed_ontime:
     scene dingle town at bgspace
+
+    play music "audio/soft-dreams-lofi-vibes-216576" fadeout 1
     n "The hotel lobby is buzzing with energy. Posters and tote bags of An Phiast in various animated styles line the walls and tables. Banners hang from the ceiling, featuring An Phiast's beaming smile."
 
     n "You make your way past a crowd gathered around a life-sized cutout of An Phiast, stopping at a display case showcasing multiple animation awards."
@@ -159,7 +161,7 @@ label hotel_pressed_ontime:
         n "With that, he turns back to admire the view, lost in thought."
 
         n "You hesitate, sensing there's more to be said, but eventually you step away back into the busy lobby."
-
+        stop music fadeout 1.0
 
 
 

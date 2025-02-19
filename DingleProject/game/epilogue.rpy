@@ -44,6 +44,7 @@ label epilogue:
 
 
 label choice_epilogue_anphiast:
+    play music "audio/EmotionalPianoMusic" fadeout 1.0
 
     if (APRelationship > 4):
 
@@ -94,7 +95,9 @@ label choice_epilogue_anphiast:
         show sunset an phiast at bgspace
 
         n "Dingle is going to be great next year..."
-
+        scene black_screen
+        with very_slow_fade
+        return
     else:
 
         n "You make your way towards An Phiast, making your way through the group of fans excitedly asking for photos."
@@ -130,9 +133,11 @@ label choice_epilogue_anphiast:
         n "There's always next year..."
         
         n "...right?"
-
+        scene black_screen
+        with very_slow_fade
+        return
 label choice_epilogue_fungie:
-
+    play music "audio/EmotionalPianoMusic" fadeout 1.0
     if (FRelationship > 3):
 
         n "You make your way towards Fungie, making your way through the group of fans who have just bombarded him with selfies."
@@ -178,7 +183,9 @@ label choice_epilogue_fungie:
         show sunset fungie at bgspace
 
         n "Dingle is going to be great next year..."
-
+        scene black_screen
+        with very_slow_fade
+        return
     else:
 
         n "You make your way towards Fungie, making your way through the group of photographers and eager fans taking photos."
@@ -207,10 +214,12 @@ label choice_epilogue_fungie:
         show sunset
 
         n "...right?"
-
+        scene black_screen
+        with very_slow_fade
+        return
 
 label choice_epilogue_both:
-
+    play music "audio/EmotionalPianoMusic" fadeout 1.0
     if (APRelationship > 4 and FRelationship > 4):
 
         n "You manage to catch the eyes of both Fungie and An Phiast, who tower over the crowd below them."
@@ -278,6 +287,9 @@ label choice_epilogue_both:
         show sunset both at bgspace
 
         n "Who knows what all three of you will be up to next year?"
+        scene black_screen
+        with very_slow_fade
+        return
 
     else:
 
@@ -354,10 +366,12 @@ label choice_epilogue_both:
 
         show sunset at bgspace
         n "...right?"
-
+        scene black_screen
+        with very_slow_fade
+        return
 
 label choice_epilogue_bus:
-
+    play music "audio/EmotionalPianoMusic" fadeout 1.0
     n "You linger for a moment, watching as the festival winds down as the last of the crowd takes their photos with Fungie and An Phiast."
 
     n "You decide you've had your fill. You've seen enough of the town, the festival, and the mascots to know this is something far bigger than you."
@@ -374,6 +388,10 @@ label choice_epilogue_bus:
 
     n "There's always next year..."
 
+    scene black_screen
+    with very_slow_fade
+    return
+    
 
 
 

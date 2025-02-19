@@ -12,7 +12,8 @@ label tourist_pressed:
 label tourist_scene:
 
     scene dingle town at bgspace
-    "Tourist Center Pressed! There's a statue of Fungie here."
+
+    play music "audio/Seagulls.mp3" fadeout 1.0
 
     # FUNGIE ONLY DIALOGUE
 
@@ -46,7 +47,7 @@ label tourist_scene:
     
 
     label choice_tourist_Dangerous:
-        $FRelationship +=1;
+        $ FRelationship +=1;
         f "Let's just say… I had to work hard to make this town what it is today - a place people love
         to visit. But not everyone shared that vision."
         player "But-"
@@ -88,7 +89,8 @@ label tourist_scene:
         f "Look… Dingle has a lot to offer and explore but just… keep to what's safe. Some things are
         better left alone."
         n "With that, Fungie walks away."
-        $TimeProgress+=1;
-        $WentToTouristCenter=True;
+        stop music fadeout 1.0
+        $ TimeProgress+=1;
+        $ WentToTouristCenter=True;
     
         jump after_house_choice

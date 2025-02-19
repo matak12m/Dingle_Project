@@ -18,6 +18,9 @@ label bay_scene:
     scene dingle bay at bgspace
     with fast_fade
     
+    play music "audio/Sea waves.mp3" fadeout 1.0
+
+
     show an phiast talking happy
     with fast_fade
     a "This is the bay!"
@@ -192,7 +195,9 @@ label bay_scene:
         a "I'd rather not talk to him right now. Do you want to go somewhere else before he sees us?"
         "You pull up you town map again."
         player "Let's see..."
-        $TimeProgress+=1;
-        $WentToBay=True;
+
+        stop music fadeout 1
+        $ TimeProgress+=1;
+        $ WentToBay=True;
     jump after_house_choice
 

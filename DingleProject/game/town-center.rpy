@@ -11,7 +11,7 @@ label town_pressed:
 
 label town_scene:
     scene dingle town at bgspace
-    "Welcome to the town! I hope you like colourful houses!"
+    
 
     n "The town centre of Dingle feels like a living gallery. Colourful murals decorate walls and
     shop fronts, transforming dull facades into a burst of colourful creativity."
@@ -100,13 +100,13 @@ label town_scene:
         a "It's about this old man who went fishing on his boat every morning."
         n "You take in the remaining murals in silence. An Phiast still seems a bit down."
         jump after_choice_town_1
-        $TimeProgress+=1;
-        $WentToTown=True;
-
+       
     
     label after_choice_town_1:
+        stop music fadeout 1.0
+        $  TimeProgress+=1;
+        $ WentToTown=True;
 
-        
 
         jump after_house_choice
 

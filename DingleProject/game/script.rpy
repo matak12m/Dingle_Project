@@ -14,7 +14,7 @@ define u = Character("???", window_background=Frame("gui/textbox.png"))
 define n = Character("", window_background=Frame("gui/thoughtbox.png"))
 define fast_fade = Dissolve(0.5, window_background=Frame("gui/textbox.png"))
 define slow_fade = Dissolve(1.5, window_background=Frame("gui/textbox.png"))
-
+define ver_slow_fade = Dissolve(5, window_background=Frame("gui/textbox.png"))
 
 
 
@@ -99,8 +99,9 @@ label start:
     show bus inside at bgspace
     with fast_fade
    
-
+    play music "audio/soft-jazz-piano-music-233868.mp3" fadeout 1
     # These display lines of dialogue.
+    
 
     n "It's your third year of college, and your lecturers arranged for your class to go to Animation Dingle."
     n "You're not exactly sure what the event is about, but you like art, and apparently animators from all over are going to be there!"
@@ -314,6 +315,7 @@ label start:
         scene darkened map at bgspace
         with fast_fade
         player"for now, we could see where we wanna go. I can already see a few clear options..."
+        stop music fadeout 1.0
 
         label map_screen:  
             scene darkened map at bgspace
