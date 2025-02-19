@@ -29,9 +29,9 @@ define slow_fade = Dissolve(1.5, window_background=Frame("gui/textbox.png"))
 #Relationship values to keep track of which ending the player receives.
 #of note, the relationship doesnt increase over and over if the player goes back and selects the same choice
 
-define APRelationship = 0
+define APRelationship = 1
 
-define FRelationship = 0
+define FRelationship = 1
 
 define TimeProgress = 0
 
@@ -253,7 +253,7 @@ label start:
 
     
     label choice_prologue_1_AD:
-
+        
         f "Oh, you're one of them?"
         f "I'm sorry,{w=0.4} I mistook you for someone else."
         f "You might think you can just bring An Phiast-boy over here and take over me and my town, but you're wrong."
@@ -261,6 +261,8 @@ label start:
         jump after_choice_prologue_1
 
     label choice_prologue_1_leave:
+        $APRelationship +=1;
+        $ FRelationship -=1;
         f "Oh, I see how it is."
         f "Very well.{w=0.4} enjoy your time with the sea monster. Everyone knows they're soooo inteligent."
         with vpunch
@@ -271,6 +273,7 @@ label start:
         jump after_choice_prologue_1
 
     label choice_prologue_1_whoareyou:
+        $ FRelationship+=1;
         f "Oh, where are my manners. I'm Fungie.{w=0.4} Fungie the Dolphin."
         f "Surely you've heard of me? I'm basically the guardian of Dingle!"
         f "Guarding it from sea monsters like An Phiast here."

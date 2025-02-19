@@ -6,8 +6,15 @@
 #linear 0.3 yalign 1.1
 
 
-
 label bay_pressed:
+    if(WentToBay==True):
+        n "I think I've seen enough there, let's go somewhere else for a change!"
+    else:
+        jump bay_scene;
+    
+
+
+label bay_scene:
     scene dingle bay at bgspace
     with fast_fade
     
@@ -50,6 +57,7 @@ label bay_pressed:
         jump after_choice_bay_1
 
     label choice_bay_1_yes:
+        $ APRelationship+=1;
         show an phiast unhappy
         a "Whoa, dude that's..."
         show an phiast offscreen_right
@@ -164,7 +172,7 @@ label bay_pressed:
 
 
     label choice_bay_2_silent:
-
+        APRelationship+=1;
         n "you see no reason to spoil the moment with words."
         n "Hanging out with An Phiast can be hectic. {w=1.0} Not in a bad way, but still. A peaceful break like this is welcome."
         show an phiast happy
@@ -184,6 +192,7 @@ label bay_pressed:
         a "I'd rather not talk to him right now. Do you want to go somewhere else before he sees us?"
         "You pull up you town map again."
         player "Let's see..."
-        
+        $TimeProgress+=1;
+        $WentToBay=True;
     jump after_house_choice
 

@@ -1,4 +1,11 @@
 ﻿# ending script
+
+
+#max AP points you can gain: 7
+#max F points you can gain: 5
+#currently you start with 1 in each.
+
+
 label epilogue:
 
 
@@ -38,7 +45,7 @@ label epilogue:
 
 label choice_epilogue_anphiast:
 
-    if (APRelationship > 3):
+    if (APRelationship > 4):
 
         n "You make your way towards An Phiast, making your way through the group of fans now heading back to the hotel."
 
@@ -204,7 +211,7 @@ label choice_epilogue_fungie:
 
 label choice_epilogue_both:
 
-    if (APRelationship > 3 and FRelationship > 3):
+    if (APRelationship > 4 and FRelationship > 4):
 
         n "You manage to catch the eyes of both Fungie and An Phiast, who tower over the crowd below them."
 

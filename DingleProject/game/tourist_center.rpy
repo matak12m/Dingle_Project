@@ -6,16 +6,17 @@ transform jump:
 
 
 label tourist_pressed:
-    scene dingle town at bgspace with fade:
-        pause 2.0
-        easein 2.0 xzoom 1.3 yzoom 1.3 xalign 0.6 yalign 0.6
+    if(WentToTouristCenter==True):
+        n "I think I've seen enough there, let's go somewhere else for a change!"
+    else:
+        jump tourist_scene;
+    
 
 
-    pause 2.0 
+label tourist_scene:
 
-    scene maxresdefault with fade
-
-    pause 1.0
+    scene dingle town at bgspace
+    "Tourist Center Pressed! There's a statue of Fungie here."
 
     # FUNGIE ONLY DIALOGUE
 
@@ -70,8 +71,9 @@ label tourist_pressed:
     
 
     label choice_tourist_Dangerous:
-        f "Let's just say{cps=*0.3}...{/cps} I had to work hard to make this town what it is today - a place people love
-        to visit.{w=0.35} But{cps=*0.2}...{/cps} not everyone shared that vision."
+        $FRelationship +=1;
+        f "Let's just say… I had to work hard to make this town what it is today - a place people love
+        to visit. But not everyone shared that vision."
         player "But-"
         f "*Interrupts*\nJust{cps=*0.2}...{/cps} keep your distance.{w=0.4}\nTrust me on this - this town needs me more than
         it needs him."
@@ -79,6 +81,7 @@ label tourist_pressed:
     
 
     label choice_tourist_AreYouSure:
+        $ FRelationship -=1;
         player "I've met him. He seemed{cps=*0.3}...{/cps}{w=0.1} kind.{w=0.4} Are you sure he's as bad as
         you say?"
 
@@ -94,6 +97,8 @@ label tourist_pressed:
         jump after_choice_tourist_1
 
     label choice_tourist_Why:
+        $ FRelationship+=1;
+        $ APRelationship+=1;
 
         show fungie neutral
 
@@ -133,13 +138,8 @@ label tourist_pressed:
 
         f "Look{cps=*0.2}...{/cps} Dingle has a lot to offer and explore but just{cps=*0.2}...{/cps} keep to what's safe.{w=0.2} Some things are
         better left alone."
-
-        show fungie neutral:
-            easein 0.4 xzoom -1.0
-            easeout 0.8 xalign 2.0 
-
-        n "With that,{w=0.1} Fungie walks away."
-
-
+        n "With that, Fungie walks away."
+        $TimeProgress+=1;
+        $WentToTouristCenter=True;
     
         jump after_house_choice
