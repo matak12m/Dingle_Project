@@ -1,28 +1,61 @@
 ﻿# town center script
 
+transform jump:
+    ease 0.1 yoffset -50
+    ease 0.1 yoffset 0
+
 
 label tourist_pressed:
-    scene dingle town at bgspace
-    "Tourist Center Pressed! There's a statue of Fungie here."
+    scene dingle town at bgspace with fade:
+        pause 2.0
+        easein 2.0 xzoom 1.3 yzoom 1.3 xalign 0.6 yalign 0.6
+
+
+    pause 2.0 
+
+    scene maxresdefault with fade
+
+    pause 1.0
 
     # FUNGIE ONLY DIALOGUE
 
+    show fungie smug with dissolve:
+        matrixcolor BrightnessMatrix(-0.1) * SaturationMatrix(0.0)
+        xalign 0.5 yalign -1.0
+        
     n "You make your way to the tourist centre, where you come across a large statue of a very
     familiar dolphin."
-    n "The statue is in pristine condition, and is almost lifelike. You reach out to touch it's smooth
-    surface..."
+
+    n "The statue is in pristine condition, and is almost lifelike.{w=0.1}You reach out to touch its smooth
+    surface{cps=*0.05}...{/cps}"
+
+    show fungie annoyed with hpunch:
+        ease 0.1 yoffset -100
+        matrixcolor IdentityMatrix()
+        ease 0.2 yoffset 0
+
     f "Did you need something?"
-    n " *You jump back in shock as the statue comes to life* No, I'm sorry! I thought you were a
-    statue…"
-    f " *He chuckles* They did a good job, didn't they? But don't mistake me for some cold block
+    n "*You jump back in shock as the statue comes to life*"
+    player "No, I'm sorry!{w=0.1} I thought you were a
+    statue..."
+
+    show fungie smug at jump
+
+    f "*He chuckles*\nThey did a good job, didn't they?{w=0.1} But don't mistake me for some cold block
     of stone - I'm the real deal."
-    n " *You look him up and down* …The resemblance is uncanny. Is that not weird to see
+    n "*You take a brief moment to look him up and down*"
+    player "{cps=*0.2}...{/cps}The resemblance is uncanny. {w=0.3}Is it not weird to see
     yourself in stone every day?"
     f "Not at all, in fact - I'm grateful for the honour. It's a big responsibility being the face of this
     town; people come from all over just to catch a glimpse of me!"
-    player "Well… people seem to talk about An Phiast more than you… He's a mascot like you,
+    player "Well{cps=*0.3}...{/cps} people seem to talk about An Phiast{nw}{done} more than you{cps=*0.3}...{/cps} He's a mascot like you,
     right?"
-    f "An Phiast? *Pause* I'm not surprised. He has a way of… lurking in people's heads, even
+    
+    show fungie annoyed at jump
+
+    player "Well{cps=*0.3}...{/cps} people seem to talk about An Phiast{fast} more than you{cps=*0.3}...{/cps} He's a mascot like you,
+    right?"
+    f "An Phiast{cps=*0.2}...?{/cps}\nI'm not surprised.{w=0.2} He has a way of{cps=*0.25}...{/cps} lurking in people's heads, even
     when he doesn't belong there."
 
 
@@ -37,28 +70,39 @@ label tourist_pressed:
     
 
     label choice_tourist_Dangerous:
-        f "Let's just say… I had to work hard to make this town what it is today - a place people love
-        to visit. But not everyone shared that vision."
+        f "Let's just say{cps=*0.3}...{/cps} I had to work hard to make this town what it is today - a place people love
+        to visit.{w=0.35} But{cps=*0.2}...{/cps} not everyone shared that vision."
         player "But-"
-        f " *Interrupts* Just… keep your distance. Trust me on this - this town needs me more than
+        f "*Interrupts*\nJust{cps=*0.2}...{/cps} keep your distance.{w=0.4}\nTrust me on this - this town needs me more than
         it needs him."
         jump after_choice_tourist_1
     
 
     label choice_tourist_AreYouSure:
-        player "I've met him. He seemed… kind. Are you sure he's as bad as
+        player "I've met him. He seemed{cps=*0.3}...{/cps}{w=0.1} kind.{w=0.4} Are you sure he's as bad as
         you say?"
-        f " *Flicker of anger* Kind? Sure - that's how he wants you to see him. It's all an act, nothing
+
+        show fungie angry at jump
+
+        f "{w=0.1}{cps=*1.5}{shader=jitter:u__jitter=0.0, 3.0}Kind?{/shader}{/cps}{w=0.35} Sure -{w=0.2} that's how he wants you to see him.{w=0.2}\nIt's all an act, nothing
         more."
-        player "No, he's not like that! He genuinely cares for the people in this town, just like you."
-        f "Forget it. Believe what you want, but don't say I didn't warn you."
+        player "No,{w=0.1} he's not like that! He genuinely cares for the people in this town, just like you."
+
+        show fungie annoyed
+
+        f "Forget it.{w=0.2} Believe what you want, but don't say I didn't warn you."
         jump after_choice_tourist_1
 
     label choice_tourist_Why:
-        f "*Pause* He's… complicated. People don't know what to make of him. Some see a
+
+        show fungie neutral
+
+        f "{cps=*0.1}...{/cps}{w=0.2}{nw}"
+
+        f "He's{cps=*0.3}...{/cps} complicated.{w=0.2} People don't know what to make of him.{w=0.2} Some see a
         monster, others see him as misunderstood."
         player "And what do you see?"
-        f "I see someone who doesn't belong here. Someone who never has. But I don't expect you
+        f "I see someone who doesn't belong here.{w=0.2} Someone who never has.{w=0.2} But I don't expect you
         to understand."
         jump after_choice_tourist_1
     
@@ -66,15 +110,35 @@ label tourist_pressed:
     label after_choice_tourist_1:
 
 
-        player "Wait but-"
-        u "Mammy, look! It's Fungie!"
+        player "Wait, but-"
+
+        show fungie dontlaugh at jump
+
+        u "Mammy, look!{w=0.1} It's Fungie!"
+
+        show fungie smug:
+            ease 0.5 xzoom -1.0 xalign 0.7
+
         n "Your conversation is interrupted by a child pointing excitedly at Fungie. His demeanor
         snaps back into his polished, public self upon hearing his name."
-        f "Well hello there, little one!"
+        f "Well hello there,{w=0.1} little one!"
+
+        show fungie smug:
+            ease 1.5 xalign 0.9
+
         n "As Fungie begins to walk away to join the mother and child for pictures, he pauses."
-        f "Look… Dingle has a lot to offer and explore but just… keep to what's safe. Some things are
+
+        show fungie sad:
+            easein 0.4 xzoom 1.0
+
+        f "Look{cps=*0.2}...{/cps} Dingle has a lot to offer and explore but just{cps=*0.2}...{/cps} keep to what's safe.{w=0.2} Some things are
         better left alone."
-        n "With that, Fungie walks away."
+
+        show fungie neutral:
+            easein 0.4 xzoom -1.0
+            easeout 0.8 xalign 2.0 
+
+        n "With that,{w=0.1} Fungie walks away."
 
 
     
