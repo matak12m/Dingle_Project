@@ -2,6 +2,15 @@
 
 
 label tourist_pressed:
+    if(WentToTouristCenter==True):
+        n "I think I've seen enough there, let's go somewhere else for a change!"
+    else:
+        jump tourist_scene;
+    
+
+
+label tourist_scene:
+
     scene dingle town at bgspace
     "Tourist Center Pressed! There's a statue of Fungie here."
 
@@ -37,6 +46,7 @@ label tourist_pressed:
     
 
     label choice_tourist_Dangerous:
+        $FRelationship +=1;
         f "Let's just say… I had to work hard to make this town what it is today - a place people love
         to visit. But not everyone shared that vision."
         player "But-"
@@ -46,6 +56,7 @@ label tourist_pressed:
     
 
     label choice_tourist_AreYouSure:
+        $ FRelationship -=1;
         player "I've met him. He seemed… kind. Are you sure he's as bad as
         you say?"
         f " *Flicker of anger* Kind? Sure - that's how he wants you to see him. It's all an act, nothing
@@ -55,6 +66,8 @@ label tourist_pressed:
         jump after_choice_tourist_1
 
     label choice_tourist_Why:
+        $ FRelationship+=1;
+        $ APRelationship+=1;
         f "*Pause* He's… complicated. People don't know what to make of him. Some see a
         monster, others see him as misunderstood."
         player "And what do you see?"
@@ -75,7 +88,7 @@ label tourist_pressed:
         f "Look… Dingle has a lot to offer and explore but just… keep to what's safe. Some things are
         better left alone."
         n "With that, Fungie walks away."
-
-
+        $TimeProgress+=1;
+        $WentToTouristCenter=True;
     
         jump after_house_choice

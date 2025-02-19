@@ -2,6 +2,14 @@
 
 
 label town_pressed:
+    if(WentToTown==True):
+        n "I think I've seen enough there, let's go somewhere else for a change!"
+    else:
+        jump town_scene;
+    
+
+
+label town_scene:
     scene dingle town at bgspace
     "Welcome to the town! I hope you like colourful houses!"
 
@@ -41,7 +49,7 @@ label town_pressed:
 
     label choice_town_NotFair:
 
-
+        APRelationship +=1;
     
         n "Your voice cuts through the laughter. Both An Phiast and Fungie are surprised."
         f "Oh? I didn't realise you two were so… close."
@@ -62,7 +70,8 @@ label town_pressed:
 
 
     label choice_town_Tour:
-
+        $ FRelationship +=1;
+        $ APRelationship -=1;
         n "You hesitate before speaking."
         f "I mean it… If you ever want a tour, I'd be more than happy to give you one."
         n "You glance between Fungie and An Phiast."
@@ -79,8 +88,8 @@ label town_pressed:
         # THIS SCENE COULD ANGER AN PHIAST AND LEAD INTO A SCENE WITH FUNGIE ONLY
 
     label choice_town_Silence:
-
-        n "you're not going to humor him. It's better to jut ignore them."
+        $ APRelationship -=1;
+        n "you're not going to humor him. It's better to just ignore them."
         f "Dolphin got your tongue? Can't say I blame you."
         f "in any case, if you change your mind, do let me know."
         f "it would certainly be better than what he could ever offer you."
@@ -91,7 +100,8 @@ label town_pressed:
         a "It's about this old man who went fishing on his boat every morning."
         n "You take in the remaining murals in silence. An Phiast still seems a bit down."
         jump after_choice_town_1
-
+        $TimeProgress+=1;
+        $WentToTown=True;
 
     
     label after_choice_town_1:

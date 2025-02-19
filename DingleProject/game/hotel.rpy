@@ -67,6 +67,8 @@ label hotel_pressed_ontime:
         jump after_hotel_choice_1
 
     label choice_hotel_1_meantalot:
+        $ FRelationship+=1;
+        $ APRelationship-=1;
 
         f "It did."
 
@@ -124,11 +126,14 @@ label hotel_pressed_ontime:
 
 
     label choice_hotel_2_youvedonealot:
+        $ APRelationship+=1;
 
         a "I appreciate that. I just wonder if it was worth the cost."
         jump after_hotel_choice_2
 
     label choice_hotel_2_fungieexcluded:
+        $ FRelationship+=1;
+        $ APRelationship-=1;
 
         a "Well he's not exactly forgotten, is he?"
 
@@ -137,7 +142,8 @@ label hotel_pressed_ontime:
         jump after_hotel_choice_2
 
     label choice_hotel_2_moretothis:
-
+        $ APRelationship +=1;
+        $ FRelationship +=1;
         a "There always is something more to things isn't there? *Chuckles*"
         jump after_hotel_choice_2
 

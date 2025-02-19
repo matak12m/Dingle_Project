@@ -2,7 +2,16 @@
 
 define slowFlash = Fade(1.0, 0.3, 0.3, color="#fff")
 
+
 label church_pressed:
+    if(WentToChurch==True):
+        n "I think I've seen enough there, let's go somewhere else for a change!"
+    else:
+        jump church_scene;
+    
+
+
+label church_scene:
     scene Church 
     show street_monastery at bgspace with Fade(0.0, 0.3, 2.5)
 
@@ -60,7 +69,7 @@ label church_pressed:
     
 
     label choice_church_APStatue:
-
+        $ APRelationship+=1;;
         player "I mean, you're a mascot too, right?"
         show an phiast happy
         a "*With a smirk*\nRight? I'd love to have a grand statue near the bay. Give it a grand pose,
@@ -80,32 +89,34 @@ label church_pressed:
             easeout 0.3 yalign 1.0
         
             
-        n "He stands on his tippy toes and flexes his arms in the air on both sides. You can't help but
-        laugh."
+        n "He stands on his tippy toes and flexes his arms in the air on both sides. You can't help but laugh."
         jump after_choice_church_1
     
     label choice_church_ILikeThem:
         player "It shows how much he's done for the town."
         
         show an phiast unhappy
-        
-        a "*Rolls his eyes*\nYeah, I get it...{w=0.2} Everyone needs their local hero,{w=0.1}{nw}{done} right?"
+        n "He rolls his eyes"
+        a "Yeah, I get it...{w=0.2} Everyone needs their local hero,{w=0.1}{nw}{done} right?"
         
         # lil shrug
         show an phiast unhappy:
             easein 0.3 yalign 0.9
             easeout 0.35 yalign 1.0
         
-        a "*Rolls his eyes*\nYeah, I get it... Everyone needs their local hero,{fast} right?"
+        a "Yeah, I get it... Everyone needs their local hero,{fast} right?"
             
         jump after_choice_church_1
 
     
     label choice_church_SoMany:
+        $APRelationship+=1;
+        $FRelationship-=1;
         player "It's clear he's done a lot for this town...{w=0.3}\nbut that's a lot of
             statues"
         show an phiast talking happy
-        a "*With a low chuckle*\nIt certainly is."
+        n"he chuckles"
+        a "It certainly is."
         jump after_choice_church_1
 
 
@@ -239,7 +250,8 @@ label church_pressed:
 
         player "...do you wanna go somewhere else, to take your mind off of things?"
         a "{cps=*0.1}...{/cps}{w=0.5}\nsure."
-
+        $TimeProgress+=1;
+        $WentToChurch=True;
 
         jump after_house_choice
 
