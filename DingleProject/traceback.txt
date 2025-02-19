@@ -1,40 +1,60 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-TypeError: 'str' object is not callable
+After initialization, but before game start.
+  File "game/screens/other_screens.rpy", line 17, in prepare_screen
+    screen about():
+  File "game/screens/other_screens.rpy", line 17, in prepare
+    screen about():
+  File "game/screens/other_screens.rpy", line 25, in prepare
+    viewport:
+  File "game/screens/other_screens.rpy", line 25, in prepare
+    viewport:
+  File "game/screens/other_screens.rpy", line 30, in prepare
+    has vbox
+  File "game/screens/other_screens.rpy", line 30, in prepare
+    has vbox
+  File "game/screens/other_screens.rpy", line 42, in prepare
+    text("Music by {a="https://pixabay.com/users/16027823/collections/"}Clavier-Music{/a}")
+SyntaxError: invalid syntax (game/screens/other_screens.rpy, line 42)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\core.py", line 3273, in interact_core
-    rv = renpy.display.focus.mouse_handler(ev, x, y)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\focus.py", line 636, in mouse_handler
-    return change_focus(new_focus, default=default)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\focus.py", line 569, in change_focus
-    rv = widget.focus(default=default)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\behavior.py", line 1019, in focus
-    rv = run(self.hovered)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\behavior.py", line 394, in run
-    new_rv = run(i, *args, **kwargs)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\behavior.py", line 401, in run
-    return action(*args, **kwargs)
-TypeError: 'str' object is not callable
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 1026, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens/other_screens.rpy", line 17, in prepare_screen
+    screen about():
+  File "game/screens/other_screens.rpy", line 17, in prepare
+    screen about():
+  File "game/screens/other_screens.rpy", line 25, in prepare
+    viewport:
+  File "game/screens/other_screens.rpy", line 25, in prepare
+    viewport:
+  File "game/screens/other_screens.rpy", line 30, in prepare
+    has vbox
+  File "game/screens/other_screens.rpy", line 30, in prepare
+    has vbox
+  File "game/screens/other_screens.rpy", line 42, in prepare
+    text("Music by {a="https://pixabay.com/users/16027823/collections/"}Clavier-Music{/a}")
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\py3analysis.py", line 803, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\py3analysis.py", line 785, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/screens/other_screens.rpy, line 42)
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 Dingle Visual Novel 1.0
-Wed Feb 19 17:36:31 2025
+Wed Feb 19 19:39:07 2025
