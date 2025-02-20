@@ -9,6 +9,9 @@ label tourist_pressed:
     if(WentToTouristCenter==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
         jump map_screen
+    elif(FungieTime==False):
+        a "Hey, can we go somewhere else? I don't really want to be around that statue..."
+        jump map_screen
     
 
 
@@ -138,9 +141,28 @@ label tourist_scene:
 
         f "Look{cps=*0.2}...{/cps} Dingle has a lot to offer and explore but just{cps=*0.2}...{/cps} keep to what's safe.{w=0.2} Some things are
         better left alone."
+        show fungie neutral:
+            easein 0.4 xzoom -1.0
+            linear 2.0 xalign 3.0
         n "With that, Fungie walks away."
+        
+
+        n "As you head back to the town, you bump into An Phiast"
+        show an phiast unhappy:
+            xalign 0.65 yalign 1.1
+        with fast_fade
+        a "..."
+        show an phiast happy:
+            easein 0.1 yalign 1.0
+        a "Oh, there you are!"
+        player "Hey, I'm sorry about that..."
+        show an phiast somber:
+            easein 0.1 yalign 1.1
+        a "It's fine."
+        a "I don't want to dwell on it. Let's just head somewhere together, okay?"
         stop music fadeout 1.0
         $ TimeProgress+=1;
         $ WentToTouristCenter=True;
+        $ FungieTime=False;
     
         jump map_screen

@@ -316,11 +316,9 @@ label start:
         with fast_fade
         player"for now, we could see where we wanna go. I can already see a few clear options..."
         stop music fadeout 1.0
+        n "click where you would like to go!"
+        jump map_screen
 
-        label map_screen:  
-            scene darkened map at bgspace
-            with fast_fade
-            call screen MapUI      # call the buttons
         
 
 

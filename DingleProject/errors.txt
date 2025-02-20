@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/fishing_bay.rpy", line 114: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    easein
-    ^
+The label map_screen is defined twice, at File "game/custom_screens.rpy", line 28:
+label map_screen:  
+and File "game/script.rpy", line 320:
+        label map_screen:  
+
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Feb 20 12:30:53 2025
+Thu Feb 20 13:49:03 2025

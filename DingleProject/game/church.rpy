@@ -192,7 +192,7 @@ label church_scene:
         player "{cps=*0.15}...{/cps}{w=0.6}{nw}"
         player "When you were what?"
 
-    if (APRelationship > 1):
+    if (APRelationship > 2):
         jump church_Trust
     else:
         jump church_NoTrust
@@ -234,24 +234,20 @@ label church_scene:
         show an phiast unhappy:
             ease 1.2 xalign -1.3
 
-        n "St. Cuan nods at you, encouraging you to head out too. You nod back and make your way
+        n "St. Cuan nods at you too, encouraging you to head out too. You nod back and make your way
         out of the church."
 
         scene street_monastery_garden_two at bgspace with fade
 
         player "An Phiast, wait!"
         
-        show an phiast unhappy:
-            xalign 2.3 xzoom 1.0 yalign 1.0
-            ease 1.2 xalign 1.3
 
-        pause 1.6
-
-        player "...do you wanna go somewhere else, to take your mind off of things?"
+        n "But he's already nowhere to be seen..."
         a "{cps=*0.1}...{/cps}{w=0.5}\nsure."
         stop music fadeout 1
         $ TimeProgress+=1;
         $ WentToChurch=True;
+        $ FungieTime=True;
 
         jump map_screen
 

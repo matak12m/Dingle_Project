@@ -9,7 +9,27 @@ label town_pressed:
 
 
 label town_scene:
-    scene dingle town at bgspace
+
+    show dingle town at bgspace with Fade(0.0, 0.3, 2.5)
+    if (FungieTime==True):
+        show an phiast happy:
+            xalign 0.5 yalign 1.1
+            easein 0.1 yalign 1.0
+            easein 0.1 yalign 1.1
+        a "Oh, there you are!"
+        player "Hey, I'm sorry about that..."
+        show an phiast somber:
+            easein 0.1 yalign 1.1
+        a "It's fine."
+        a "I don't want to dwell on it. Let's just head somewhere together, okay?"
+        n "And as if nothing happened, An Phiast returns to his regular smiley self."
+        $ FungieTime=False;
+
+
+    
+    scene town_long_street at bgspace
+    with fast_fade
+    pause 1.0
     
 
     n "The town centre of Dingle feels like a living gallery. Colourful murals decorate walls and
@@ -83,6 +103,7 @@ label town_scene:
         player "Wait, An Phiast-"
         n "You call after him, but he has already walked away, slipping into the shadows."
         n "You stay at the town centre, admiring the remaining murals in silence."
+        $ FungieTime=True;
         jump after_choice_town_1
         # THIS SCENE COULD ANGER AN PHIAST AND LEAD INTO A SCENE WITH FUNGIE ONLY
 

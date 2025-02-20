@@ -21,11 +21,27 @@ label bay_pressed:
 
 
 label bay_scene:
+    
+    show street_beach_fence at bgspace with Fade(0.0, 0.3, 2.5)
+    if (FungieTime==True):
+        show an phiast happy:
+            xalign 0.5 yalign 1.1
+            easein 0.1 yalign 1.0
+            easein 0.1 yalign 1.1
+        a "Oh, there you are!"
+        player "Hey, I'm sorry about that..."
+        show an phiast somber:
+            easein 0.1 yalign 1.1
+        a "It's fine."
+        a "I don't want to dwell on it. Let's just head somewhere together, okay?"
+        n "And as if nothing happened, An Phiast returns to his regular smiley self."
+        $ FungieTime=False;
+
+
+    
     scene dingle bay at bgspace
     with fast_fade
-    
-    
-
+    pause 1.0
 
     show an phiast talking happy
     with fast_fade
@@ -148,7 +164,7 @@ label bay_scene:
         with fast_fade
         a "Oh?"
         show an phiast unhappy:
-            easeout yalign 1.1
+            easeout 0.1 yalign 1.1
         a "I suppose you want to know more about why we're fighting."
         a "When I first came into town, it was different."
         a "It was same as this year. I came a few days before the Animation Dingle, and we met."

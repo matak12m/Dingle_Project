@@ -20,7 +20,7 @@ define config.name = _("Dingle Visual Novel")
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "Dingle Visual Novel"
+define build.name = "RivalsPassion"
 
 ## Save directory ##############################################################
 ##
