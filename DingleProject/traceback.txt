@@ -1,32 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/fishing_bay.rpy", line 45, in script
-    show an phiast talking happy at front
-  File "game/fishing_bay.rpy", line 45, in <module>
-    show an phiast talking happy at front
-NameError: name 'front' is not defined
+Compiling ATL code at game/script.rpy:289
+  File "game/script.rpy", line 288, in script
+    show fungie neutral:
+Exception: Expression '1.1' is not an ATL transform, and so cannot be included in an ATL interpolation.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/fishing_bay.rpy", line 45, in script
-    show an phiast talking happy at front
+  File "game/script.rpy", line 288, in script
+    show fungie neutral:
   File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1070, in show_imspec
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1070, in <listcomp>
-    at_list = [ renpy.python.py_eval(i) for i in at_list ]
-  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/fishing_bay.rpy", line 45, in <module>
-    show an phiast talking happy at front
-NameError: name 'front' is not defined
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 503, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\display\scenelists.py", line 477, in add
+    thing.visit_all(lambda d : None)
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 424, in visit_all
+    for d in self.visit():
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 816, in visit
+    block = self.compile()
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 723, in compile
+    block = self.atl.compile(self.context)
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 925, in compile
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 925, in <listcomp>
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 1292, in compile
+    raise Exception("Expression %r is not an ATL transform, and so cannot be included in an ATL interpolation." % expr)
+Exception: Expression '1.1' is not an ATL transform, and so cannot be included in an ATL interpolation.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 Dingle Visual Novel 1.0
-Thu Feb 20 14:01:10 2025
+Thu Feb 20 14:59:43 2025
