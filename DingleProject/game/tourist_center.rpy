@@ -4,8 +4,7 @@
 label tourist_pressed:
     if(WentToTouristCenter==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
-    else:
-        jump tourist_scene
+        jump map_screen
     
 
 
@@ -93,4 +92,4 @@ label tourist_scene:
         $ TimeProgress+=1;
         $ WentToTouristCenter=True;
     
-        jump after_house_choice
+        jump map_screen

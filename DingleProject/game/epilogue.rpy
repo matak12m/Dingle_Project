@@ -1,7 +1,7 @@
 ﻿# ending script
 
 
-#max AP points you can gain: 7
+#max AP points you can gain: 8
 #max F points you can gain: 5
 #currently you start with 1 in each.
 

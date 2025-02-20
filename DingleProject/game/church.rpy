@@ -6,8 +6,7 @@ define slowFlash = Fade(1.0, 0.3, 0.3, color="#fff")
 label church_pressed:
     if(WentToChurch==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
-    else:
-        jump church_scene
+        jump map_screen
     
 
 
@@ -254,5 +253,5 @@ label church_scene:
         $ TimeProgress+=1;
         $ WentToChurch=True;
 
-        jump after_house_choice
+        jump map_screen
 

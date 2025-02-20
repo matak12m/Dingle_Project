@@ -4,8 +4,7 @@
 label town_pressed:
     if(WentToTown==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
-    else:
-        jump town_scene
+        jump map_screen
     
 
 
@@ -108,7 +107,7 @@ label town_scene:
         $ WentToTown=True;
 
 
-        jump after_house_choice
+        jump map_screen
 
 
 

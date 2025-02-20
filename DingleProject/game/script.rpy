@@ -321,7 +321,7 @@ label start:
             scene darkened map at bgspace
             with fast_fade
             call screen MapUI      # call the buttons
-            
+        
 
 
 
@@ -329,33 +329,5 @@ label start:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-label after_house_choice:
-    "Let's take a look at the map again..."
-    jump map_screen
-
-
-
-
-
-
-
-
-    # This ends the game.
-
-    return
 
 

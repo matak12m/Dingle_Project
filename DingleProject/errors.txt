@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/church.rpy", line 36: end of line expected.
-(Perhaps you left out a " at the end of the first line.)
-    n "You take in the sight before moving on through the garden. However, your elbow grazes
-        the pedestal, and the statue tumbles to the ground with a loud{fast} {size=+4}{shader=jitter:u__jitter=0.0, 3.0 play sound "audio/falling sound.mp3"}smack{/shader}." with vpunch
-                                                                                                                                     ^
+File "game/fishing_bay.rpy", line 114: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    easein
+    ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Feb 19 19:12:36 2025
+Thu Feb 20 12:30:53 2025

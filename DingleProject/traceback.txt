@@ -1,60 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens/other_screens.rpy", line 17, in prepare_screen
-    screen about():
-  File "game/screens/other_screens.rpy", line 17, in prepare
-    screen about():
-  File "game/screens/other_screens.rpy", line 25, in prepare
-    viewport:
-  File "game/screens/other_screens.rpy", line 25, in prepare
-    viewport:
-  File "game/screens/other_screens.rpy", line 30, in prepare
-    has vbox
-  File "game/screens/other_screens.rpy", line 30, in prepare
-    has vbox
-  File "game/screens/other_screens.rpy", line 42, in prepare
-    text("Music by {a="https://pixabay.com/users/16027823/collections/"}Clavier-Music{/a}")
-SyntaxError: invalid syntax (game/screens/other_screens.rpy, line 42)
+Compiling ATL code at game/fishing_bay.rpy:38
+  File "game/fishing_bay.rpy", line 37, in script
+    show an phiast happy:
+Exception: Expression '1.0' is not an ATL transform, and so cannot be included in an ATL interpolation.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\main.py", line 652, in main
-    run(restart)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\main.py", line 94, in run
-    renpy.display.screen.prepare_screens()
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\display\screen.py", line 1026, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens/other_screens.rpy", line 17, in prepare_screen
-    screen about():
-  File "game/screens/other_screens.rpy", line 17, in prepare
-    screen about():
-  File "game/screens/other_screens.rpy", line 25, in prepare
-    viewport:
-  File "game/screens/other_screens.rpy", line 25, in prepare
-    viewport:
-  File "game/screens/other_screens.rpy", line 30, in prepare
-    has vbox
-  File "game/screens/other_screens.rpy", line 30, in prepare
-    has vbox
-  File "game/screens/other_screens.rpy", line 42, in prepare
-    text("Music by {a="https://pixabay.com/users/16027823/collections/"}Clavier-Music{/a}")
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\py3analysis.py", line 803, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\py3analysis.py", line 785, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1144, in py_compile
-    raise e
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1081, in py_compile
-    raise orig_e
-  File "C:\Users\idaduser\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/screens/other_screens.rpy, line 42)
+  File "game/fishing_bay.rpy", line 37, in script
+    show an phiast happy:
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1111, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 503, in show
+    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\display\scenelists.py", line 477, in add
+    thing.visit_all(lambda d : None)
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\display\displayable.py", line 424, in visit_all
+    for d in self.visit():
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 816, in visit
+    block = self.compile()
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 723, in compile
+    block = self.atl.compile(self.context)
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 925, in compile
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 925, in <listcomp>
+    statements = [ i.compile(ctx) for i in self.statements ]
+  File "C:\Users\Mat\Downloads\renpy-8.3.2-sdk\renpy\atl.py", line 1292, in compile
+    raise Exception("Expression %r is not an ATL transform, and so cannot be included in an ATL interpolation." % expr)
+Exception: Expression '1.0' is not an ATL transform, and so cannot be included in an ATL interpolation.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 Dingle Visual Novel 1.0
-Wed Feb 19 19:39:07 2025
+Thu Feb 20 11:43:02 2025
