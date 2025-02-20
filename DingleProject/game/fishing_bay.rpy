@@ -10,7 +10,7 @@ label bay_pressed:
     if(WentToBay==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
     else:
-        jump bay_scene;
+        jump bay_scene
     
 
 
@@ -18,6 +18,9 @@ label bay_scene:
     scene dingle bay at bgspace
     with fast_fade
     
+    play music "audio/Sea waves.mp3" fadeout 1.0
+
+
     show an phiast talking happy
     with fast_fade
     a "This is the bay!"
@@ -172,7 +175,7 @@ label bay_scene:
 
 
     label choice_bay_2_silent:
-        APRelationship+=1;
+        $ APRelationship+=1;
         n "you see no reason to spoil the moment with words."
         n "Hanging out with An Phiast can be hectic. {w=1.0} Not in a bad way, but still. A peaceful break like this is welcome."
         show an phiast happy
@@ -192,7 +195,9 @@ label bay_scene:
         a "I'd rather not talk to him right now. Do you want to go somewhere else before he sees us?"
         "You pull up you town map again."
         player "Let's see..."
-        $TimeProgress+=1;
-        $WentToBay=True;
+
+        stop music fadeout 1
+        $ TimeProgress+=1;
+        $ WentToBay=True;
     jump after_house_choice
 

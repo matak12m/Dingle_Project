@@ -18,7 +18,7 @@ screen about():
 
     tag menu
 
-    add "#6a8eaec2" # The background; can be whatever
+    add HBox(Transform("#9BD1E5", xsize=350), "#6A8EAE") # The background; can be whatever
 
     use game_menu(_("About"))
 
@@ -29,14 +29,21 @@ screen about():
 
         has vbox
         style_prefix "about"
-
         label "[config.name!t]"
         text _("Version [config.version!t]\n")
 
+        text("Made by the students from SETU Carlow.")
+        text(" \n Matej Martinek: Dialogue, Programming, Original demo \n Dean Flood: Character Sprites, Original demo \n Rachel O'Connor: Dialogue, Map assets \n Freya Prenanta: Final Scene art \n Caitlin Brennan: Title Screen art \n Ricky Rechtackova: Audio selection \n Kai Sharpe: Programming \n Caoimhe Kearns: St. Cuan Sprite")
+        
+        text("\n\n\n\nExternal Sources:")
+        text("\nMade with EasyRenpyGui as a base")
         if gui.about:
-            text "[gui.about!t]\n"
+            text "\n[gui.about!t]\n"
 
-        text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+        text("Music by {a=https://pixabay.com/users/16027823/collections/}Clavier-Music{/a}")
+        text("Sound Effects by {a=https://itch.io/profile/bluejosh}BlueJosh{/a}")
+
+        text _("\nMade with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
 style about_label_text:

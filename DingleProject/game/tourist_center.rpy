@@ -9,14 +9,15 @@ label tourist_pressed:
     if(WentToTouristCenter==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
     else:
-        jump tourist_scene;
+        jump tourist_scene
     
 
 
 label tourist_scene:
 
     scene dingle town at bgspace
-    "Tourist Center Pressed! There's a statue of Fungie here."
+
+    play music "audio/Seagulls.mp3" fadeout 1.0
 
     # FUNGIE ONLY DIALOGUE
 
@@ -71,7 +72,7 @@ label tourist_scene:
     
 
     label choice_tourist_Dangerous:
-        $FRelationship +=1;
+        $ FRelationship +=1;
         f "Let's just say… I had to work hard to make this town what it is today - a place people love
         to visit. But not everyone shared that vision."
         player "But-"
@@ -139,7 +140,8 @@ label tourist_scene:
         f "Look{cps=*0.2}...{/cps} Dingle has a lot to offer and explore but just{cps=*0.2}...{/cps} keep to what's safe.{w=0.2} Some things are
         better left alone."
         n "With that, Fungie walks away."
-        $TimeProgress+=1;
-        $WentToTouristCenter=True;
+        stop music fadeout 1.0
+        $ TimeProgress+=1;
+        $ WentToTouristCenter=True;
     
         jump after_house_choice
