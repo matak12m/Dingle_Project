@@ -12,14 +12,25 @@ label hotel_pressed_early:
 
 
 label hotel_pressed_ontime:
-    scene dingle town at bgspace
+    scene street_hotel_road_sunny at bgspace with fade:
+        xanchor 0.5 yanchor 0.5 xpos 0.5 ypos 0.5 xzoom 1.1 yzoom 1.1
+        pause 0.5
+        easeout 4.0 xzoom 1.4 yzoom 1.4
+
+    pause 2.0
+
+    scene dingle_window_stickers at bgspace with fade
 
     play music "audio/soft-dreams-lofi-vibes-216576" fadeout 1
-    n "The hotel lobby is buzzing with energy. Posters and tote bags of An Phiast in various animated styles line the walls and tables. Banners hang from the ceiling, featuring An Phiast's beaming smile."
+    n "The hotel lobby is buzzing with energy.{w=0.2} Posters and tote bags of An Phiast in various animated styles line the walls and tables.{w=0.2} Banners hang from the ceiling, featuring An Phiast's beaming smile."
 
     n "You make your way past a crowd gathered around a life-sized cutout of An Phiast, stopping at a display case showcasing multiple animation awards."
 
-    f "Well, isn't this charming…"
+    f "Well, isn't this charming{cps=*0.5}...{/cps}"
+
+    show fungie neutral:
+        xalign 1.5 yalign -1.0
+        ease 0.8 xalign 0.8
 
     n "Fungie's voice drips with forced enthusiasm as he stands beside you, his gaze sweeping over a display of awards."
 
@@ -28,18 +39,20 @@ label hotel_pressed_ontime:
 
     player "What was that award for?"
 
-    n "He shifts uncomfortably"
-    f "Ah… It was one of the first awards ever given by the festival."
+    n "{i}He shifts uncomfortably.{/i}"
+    f "Ah{cps=*0.2}...{/cps}{w=0.2} It was one of the first awards ever given by the festival."
 
     player "You were part of the festival?"
 
-    f "Oh, I wasn't just 'part of it' - I helped create it. But, alas, you know how it is. Stories change. So do people."
+    f "Oh, I wasn't just {i}'part of it'{/i} - I helped create it.{w=0.3} But alas, you know how it is.{w=0.2} Stories change.{w=0.2} So do people."
 
     player "What happened?"
 
-    f "*Scoffs* Good question. Let's just say… things didn't exactly go to script." 
+    show fungie neutral at jump
 
-    f "Still, who can blame them? *He gestures towards the crowd* Everyone loves a hero."
+    f "{i}*He scoffs before continuing*{/i}\nGood question. Let's just say{cps=*0.4}...{/cps}{w=0.3} things didn't exactly go to script." 
+
+    f "Still,{w=0.1} who can blame them?\n{i}*He gestures towards the crowd*{/i}\n{w=0.2}Everyone loves a hero."
 
     menu:
 
@@ -54,16 +67,20 @@ label hotel_pressed_ontime:
 
         $ FRelationship+=1;
 
-        f "Oh, look at you, standing up for me."
+        show fungie smug
+
+        f "Oh, look at you,{w=0.3} standing up for me."
 
         player "His trademark smirk softens a little, and for a moment, there's almost something genuine in his expression."
 
-        f "Don't waste your energy though, I've made my peace with it. Mostly."
+        f "Don't waste your energy though, I've made my peace with it.{w=0.25} Mostly."
         jump after_hotel_choice_1
 
     label choice_hotel_1_appreciateAP:
 
-        f "Oh of course, the people love a good redemption story. Inspiring, really."
+        show fungie annoyed
+
+        f "Oh of course, the people love a good redemption story.{w=0.2} Inspiring, really."
 
         f "Who wouldn't want to root for the one everyone used to fear?"
         jump after_hotel_choice_1
@@ -72,49 +89,75 @@ label hotel_pressed_ontime:
         $ FRelationship+=1;
         $ APRelationship-=1;
 
+        show fungie smug
+
         f "It did."
 
-        n "For the first time, there's no sarcasm - just honesty. But just as quickly as it appears, it's gone, buried beneath a frown."
+        n "For the first time, there's no sarcasm - just honesty.{w=0.15} But just as quickly as it appears, it's gone, buried beneath a frown."
 
-        f "But hey, things change, right? That's life."
+        show fungie sad
+
+        f "But hey, things change, right?{w=0.15} That's life."
         jump after_hotel_choice_1
 
 
     label after_hotel_choice_1:
 
+        show fungie neutral:
+            ease 0.4 xzoom -1.0
 
+        n "He turns away from you, and before you can say anything else, a sea of people storms{nw}{done} its way through the lobby, separating you and Fungie."
 
-        n "He turns away from you, and before you can say anything else, a sea of people storms its way through the lobby, separating you and Fungie."
+        show fungie neutral:
+            ease 1.8 xalign 2.0 
+
+        n "He turns away from you, and before you can say anything else, a sea of people storms{fast} its way through the lobby, separating you and Fungie."
 
         n "You try call for him, but he's slinked his way back into the crowd, leaving you alone."
 
         n "Eager to escape the crowd, you slip away into an open conservatory, taking in the views."
 
+        show an phiast happy:
+            ypos 1.0 xpos -0.3 yanchor 1.0 xanchor 0.5 xzoom -1.0
+            ease 1.3 xpos 0.2
+
         a "Escaping the crowd?"
 
-        player "Maybe. You?"
+        player "Maybe.{w=0.15} You?"
 
-        a "Sort of. {w=1.0} It's funny. I should be soaking it all in.. I mean - this festival is supposed to be for me, isn't it?"
+        a "Sort of. {w=0.45} It's funny. I should be soaking it all in..{w=0.3} I mean - this festival is supposed to be for me, isn't it?"
 
-        player "{w=1.0} …Isn't it?"
+        player "{w=0.2}{cps=*0.2}...{/cps}Isn't it?"
 
         a "That's what they say."
 
-        player "*Hesitantly* Fungie said you used to run it together."
+        player "{cps=*0.4}...{/cps}Fungie said you used to run it together."
 
-        a "Did he now? {w=1.0} He's not wrong."
+        show an phiast angry
+
+        a "Did he now?{w=0.3} {cps=*0.1}..{/cps}{nw}{done}.. He's not wrong."
+
+        show an phiast unhappy
+
+        a "Did he now? ..{fast}{cps=*0.1}..{/cps}He's not wrong."
 
         player "What happened?"
 
-        a "*Chuckles* That's always the question, isn't it?"
+        show an phiast talking happy at jump
+
+        a "{i}*Chuckles*{/i}\nThat's always the question, isn't it?"
+
+        show an phiast happy
 
         a "We all want this town to have something special - something that will bring people together."
 
-        player "But?..."
+        show an phiast unhappy
 
-        a "*Sighs* Sometimes… even if you want the same thing, you don't see it in the same way."
+        player "But..?"
 
-        a "The past has a way of pulling people apart."
+        a "{i}*Sighs*{/i}\nSometimes{cps=*0.2}....{/cps} even if you want the same thing,{w=0.2} you don't see it in the same way."
+
+        a "The past has a way of pulling people apart{cps=*0.4}....{/cps}"
 
     menu:
 
@@ -130,33 +173,52 @@ label hotel_pressed_ontime:
     label choice_hotel_2_youvedonealot:
         $ APRelationship+=1;
 
-        a "I appreciate that. I just wonder if it was worth the cost."
+        a "I appreciate that. I just{cps=*0.2}...{/cps} wonder if it was worth the cost."
         jump after_hotel_choice_2
 
     label choice_hotel_2_fungieexcluded:
         $ FRelationship+=1;
         $ APRelationship-=1;
 
+        show an phiast angry
+
         a "Well he's not exactly forgotten, is he?"
 
         n "There's a stern bitterness in his tone."
+
+        show an phiast unhappy
+        
         a "People remember what they want to remember."
         jump after_hotel_choice_2
 
     label choice_hotel_2_moretothis:
         $ APRelationship +=1;
         $ FRelationship +=1;
-        a "There always is something more to things isn't there? *Chuckles*"
+
+        show an phiast talking happy
+        a "{i}*Chuckles*{/i}\nThere always is something more to things isn't there?"
+
+        show an phiast happy
+
         jump after_hotel_choice_2
 
 
 
     label after_hotel_choice_2:
-        a "Anyway… you should head back down. The introductory talk should be starting soon."
+
+        
+
+        a "Anyway, you should head back down. The introductory talk should be starting soon."
 
         player "What about you?"
 
-        a "I'll be down in a minute. *Sighs* Enjoy it while you can. Things don't stay the same forever."
+        show an phiast unhappy
+
+        a "I'll be down in a minute.{w=0.35}\n{i}*Sigh*{/i}{w=0.2}\nEnjoy it while you can.{w=0.2} Things don't stay the same forever."
+
+        show an phiast unhappy:
+            ease 0.6 xzoom 1.0 
+            ease 1.2 xpos -0.3
 
         n "With that, he turns back to admire the view, lost in thought."
 
