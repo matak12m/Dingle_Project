@@ -77,8 +77,8 @@ label tourist_scene:
         $ FRelationship +=1;
         f "Let's just say… I had to work hard to make this town what it is today - a place people love
         to visit. But not everyone shared that vision."
-        player "But-"
-        f "*Interrupts*\nJust{cps=*0.2}...{/cps} keep your distance.{w=0.4}\nTrust me on this - this town needs me more than
+        player "But- {nw} {done} "
+        f "\nJust{cps=*0.2}...{/cps} keep your distance.{w=0.4}\nTrust me on this - this town needs me more than
         it needs him."
         jump after_choice_tourist_1
     

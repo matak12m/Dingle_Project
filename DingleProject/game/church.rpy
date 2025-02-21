@@ -43,8 +43,12 @@ label church_scene:
 
     player "I didn't mean to, I just-"
 
+    
+
     show an phiast talking happy
-    a "*An Phiast waves off your apology*\n It's alright, happens more than you think."
+
+    n "He waves off your apology."
+    a "\n It's alright, happens more than you think."
 
     show an phiast happy
     a "Though I have to say..{w=0.1} this one is pretty famous around town."
@@ -71,7 +75,7 @@ label church_scene:
         $ APRelationship+=1;
         player "I mean, you're a mascot too, right?"
         show an phiast happy
-        a "*With a smirk*\nRight? I'd love to have a grand statue near the bay. Give it a grand pose,
+        a "\nRight? I'd love to have a grand statue near the bay. Give it a grand pose,
         something like this!"
         show an phiast happy:
             easeout 0.2 yalign 1.0 xalign 0.5
@@ -114,7 +118,7 @@ label church_scene:
         player "It's clear he's done a lot for this town...{w=0.3}\nbut that's a lot of
             statues"
         show an phiast talking happy
-        n"he chuckles"
+        n"He chuckles"
         a "It certainly is."
         jump after_choice_church_1
 
@@ -249,7 +253,7 @@ label church_scene:
         
 
         n "But he's already nowhere to be seen..."
-        a "{cps=*0.1}...{/cps}{w=0.5}\nsure."
+     
         stop music fadeout 1
         $ TimeProgress+=1;
         $ WentToChurch=True;

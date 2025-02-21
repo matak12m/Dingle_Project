@@ -121,7 +121,7 @@ label town_scene:
     f "So, what are you doing?\n{i}*He turns to you*{/i}\nIf you wanted a real tour, you could've just asked
     me."
     f "I mean, I would have loved to show you around, but I get it{cps=*0.5}...{/cps} you were probably{cps=*0.2}...{/cps}{w=0.2} busy."
-    n "One of the townsfolk pipes up, seizing their moment"
+    n "One of the townsfolk pipes up, seizing their moment."
     u "Pretty sure his version of a tour is lurking around and hiding in the bushes!"
     n "The group burst into laughter, while An Phiast shifts uncomfortably beside you."
     f "But the offer still stands."
@@ -166,8 +166,9 @@ label town_scene:
         n "Fungie and his entourage leave the town center, leaving you and An Phiast in silence."
         a "Thank you, really.{w=1.5} It means a lot."
         player "You can't let him treat you like that.{w=1.5} You're just as important to Dingle as he is."
-        show an phiast happy
-        a "{i}*He gives a weak smile*{/i}\nI'm used to it.{w=0.2} Have you seen this mural yet?"
+        show an phiast somber
+        n "he gives a weak smile."
+        a "\nI'm used to it.{w=0.2} Have you seen this mural yet?"
         a "It's about this old man who went fishing on his boat every morning. I used to{cps=*0.2}...{/cps}"
 
         show an phiast happy:
@@ -231,8 +232,9 @@ label town_scene:
         n "Fungie and his entourage leave the town center, leaving you and An Phiast in silence."
         a "Finally, they're gone{cps=*0.2}...{/cps}"
         player "Sorry about him.{w=0.15} What he said was so mean."
-        show an phiast happy
-        a "*He gives a weak smile*\nI'm used to it.{w=0.2} Have you seen this mural yet?"
+        show an phiast somber
+        n "He gives you a weak smile"
+        a "\nI'm used to it.{w=0.2} Have you seen this mural yet?"
         a "It's about this old man who went fishing on his boat every morning."
         show an phiast unhappy
         n "You take in the remaining murals in silence. An Phiast still seems a bit down."

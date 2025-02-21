@@ -230,7 +230,7 @@ label bay_scene:
         n "You see no reason to spoil the moment with words."
         n "Hanging out with An Phiast can be hectic. {w=1.0} Not in a bad way, but still. A peaceful break like this is welcome."
         show an phiast somber
-        n "He seems to be content. Despite what he said about the excitement of getting a catch, it's cler he likes the wait just as much."
+        n "He seems to be content. Despite what he said about the excitement of getting a catch, it's clear he likes the wait just as much."
         n "..."
 
         jump after_choice_bay_2

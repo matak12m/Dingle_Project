@@ -2,11 +2,13 @@
 errors listed below, and try again.
 
 
-The label map_screen is defined twice, at File "game/custom_screens.rpy", line 28:
-label map_screen:  
-and File "game/script.rpy", line 320:
-        label map_screen:  
+File "game/epilogue.rpy", line 347: show statement expects a non-empty block.
+    show fungie neutral:
+                        ^
 
+File "game/epilogue.rpy", line 407: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    easin 0.1 yalign -1.1 
+              ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Feb 20 13:49:03 2025
+Fri Feb 21 18:15:54 2025

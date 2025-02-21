@@ -23,12 +23,12 @@ label hotel_pressed_ontime:
 
     play music "audio/soft-dreams-lofi-vibes-216576" fadeout 1
     n "The hotel lobby is buzzing with energy.{w=0.2} Posters and tote bags of An Phiast in various animated styles line the walls and tables.{w=0.2} Banners hang from the ceiling, featuring An Phiast's beaming smile."
-    show an phiast unhappy
+    show an phiast unhappy with fast_fade
     a "Oh shoot, I forgot, I need to go meet up with the organizers!"
     a "I'll catch up to you later, okay?"
     player "Oh, alright. see you around then!"
     show an phiast happy:
-        ease 1.8 xalign 2.0 
+        ease 1.8 xalign 3.0 
     n"And he's gone."
     n "You make your way past a crowd gathered around a life-sized cutout of An Phiast, stopping at a display case showcasing multiple animation awards."
 

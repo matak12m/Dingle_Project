@@ -33,7 +33,7 @@ define APRelationship = 1
 
 define FRelationship = 1
 
-define TimeProgress = 0
+define TimeProgress = 1
 
 define FungieTime = "false"
 
@@ -111,8 +111,8 @@ label start:
 
     n "While on the bus, you start to think to yourself."
     n "A bit of a strange place to get together. It's on the exact opposite coast from Dublin, in the middle of the countryside."
-    n "how did all the animators from america get there?"
-    n "we're lucky the college ordered this bus, otherwise it would be impossible"
+    n "How did all the animators from america get there?"
+    n "We're lucky the college ordered this bus, otherwise it would be impossible..."
     n "Too bad my friends couldn't come. There's my classmates, sure, but I've never really talked to them... "
     n "Hopefully it won't get too lonely."
 
@@ -132,9 +132,9 @@ label start:
     scene street_beach_fence
     with fast_fade
 
-    n "You wander around, mostly following the view"
+    n "You wander around, mostly following the view."
     n "The bay looks wonderful."
-    n "You sit in the grass for a little bit, taking in the view."
+    n "You sit in the grass for a little bit, taking it all in."
     n "You didn't really get to sleep much, you had to wake up early for the bus, and couldn't fall asleep while on it."
     player "{i}Yawn... {/i}"
     n "And before you know it, you're slowly..."
@@ -217,8 +217,8 @@ label start:
     a "Although I can't exactly say people here are used to me..."
     show an phiast happy
     a "But yeah! I would love to just walk around town with someone!{w=0.3} ...I mean...{w=0.1} you!"
-    n "ignoring that little hiccup, you continue"
-    player "Great! I actually have a-"
+    n "Ignoring that little hiccup, you continue."
+    player "Great! I actually have a- {nw} {done}"
     n "But before you can continue your thought..."
     
 
@@ -328,7 +328,7 @@ label start:
         n "And just like that, Fungie speeds off."
         show an phiast unhappy:
             easein 0.1 yalign 1.1
-        a "soo...{w=0.5} that's Fungie."
+        a "Soo...{w=0.5} that's Fungie."
         a "He...{w=0.2} doesn't like me."
         player "What is his deal?"
         show an phiast seething
