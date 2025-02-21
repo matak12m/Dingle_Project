@@ -41,7 +41,7 @@ label town_pressed:
 
 label town_scene:
     show dingle town at bgspace with Fade(0.0, 0.3, 2.5)
-    if (True):
+    if (FungieTime==True):
         show an phiast happy:
             xalign 0.5 yalign 1.1
             easein 0.1 yalign 1.0
@@ -75,14 +75,14 @@ label town_scene:
     n "The town centre of Dingle feels like a living gallery. Colourful murals decorate walls and
     shop fronts, transforming dull facades into a burst of colourful creativity."
     n "You stop beside An Phiast, who's admiring a colourful wall full of murals of Dingle - murals
-    of the harbour, horses, and even men playing music in a pub."
+    of the harbour, an archer, or simple spirals on the wall."
 
     show an phiast happy:
         anchor(0.5,1.0) ypos 1.0 xpos 1.5
         ease 2.0 xpos 0.8 
 
     a "They really went all out with this one!"
-    n "He motions towards the mural of the men playing music in a pub."
+    n "He motions towards the mural of the roving men"
     player "Do you enjoy this kind of stuff?{w=0.2} Art and all that?"
 
     show an phiast talking happy at jump

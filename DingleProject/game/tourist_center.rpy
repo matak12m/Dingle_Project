@@ -17,7 +17,7 @@ label tourist_pressed:
 
 label tourist_scene:
 
-    scene dingle town at bgspace
+    scene tourist center zoomout at bgspace
 
     play music "audio/Seagulls.mp3" fadeout 1.0
 
