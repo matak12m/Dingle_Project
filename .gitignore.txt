@@ -85,8 +85,8 @@ traceback.txt
 ########################################
 *.rpyc
 *.rpymc
-game/cache/
-game/saves/
+DingleProject/game/cache/
+DingleProject/game/saves/
 log.txt
 traceback.txt
 errors.txt

@@ -24,8 +24,26 @@ screen gameUI:
 
 # 38 477, 511 380, 621 167, 741 290, 1553 559
 
+
+label map_screen:  
+    scene darkened map at bgspace
+    with fast_fade
+
+
+    if (FungieTime==True and TimeProgress > 3):
+        n "An Phiast is gone."
+        n "The Animation Dingle event is about to start, maybe he's already there?"
+    elif (FungieTime==True):
+        n "Where could he have gone{cps=*0.1}...?{/cps}"
+        n "You could look for him{cps=*0.1}...{/cps} or maybe look for Fungie instead."
+    elif (TimeProgress > 3):
+        n "The Animation Dingle event is about to start..."
+
+
+    call screen MapUI      # call the buttons
+
+
 screen MapUI:
-    
 
     imagebutton  focus_mask True:
         xpos 50

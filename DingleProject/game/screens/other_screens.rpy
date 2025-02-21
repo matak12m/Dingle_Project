@@ -33,7 +33,7 @@ screen about():
         text _("Version [config.version!t]\n")
 
         text("Made by the students from SETU Carlow.")
-        text(" \n Matej Martinek: Dialogue, Programming, Original demo \n Dean Flood: Character Sprites, Original demo \n Rachel O'Connor: Dialogue, Map assets \n Freya Prenanta: Final Scene art \n Caitlin Brennan: Title Screen art \n Ricky Rechtackova: Audio selection \n Kai Sharpe: Programming \n Caoimhe Kearns: St. Cuan Sprite")
+        text(" \n Matej Martinek: Dialogue, Programming, Original demo \n Dean Flood: Character Sprites, Original demo \n Rachel O'Connor: Dialogue, Map assets \n Freya Prananta: Final Scene art \n Caitlin Brennan: Title Screen art \n Erika Rechtackova: Audio selection \n Kai Sharpe: Programming \n Caoimhe Kearns: St. Cuan Sprite")
         
         text("\n\n\n\nExternal Sources:")
         text("\nMade with EasyRenpyGui as a base")
