@@ -41,7 +41,7 @@ label town_pressed:
 
 label town_scene:
     show dingle town at bgspace with Fade(0.0, 0.3, 2.5)
-    if (FungieTime==True):
+    if (True):
         show an phiast happy:
             xalign 0.5 yalign 1.1
             easein 0.1 yalign 1.0
@@ -55,20 +55,12 @@ label town_scene:
         n "And as if nothing happened, An Phiast returns to his regular smiley self."
         $ FungieTime=False;
 
-        
-    scene dingle town at bgspace with fade:
+    scene town_long_street at bgspace with fade:
         blur 0.0
         pause 1.0
         ease 2.0 blur 16.0
-
-    pause 1.5
-
-
-
     
-    scene town_long_street at bgspace
-    with fast_fade
-    pause 1.0
+    pause 1.5
     
     show street_art_boatmen at galleryItem(0.3, 0.2, 0.6, 0.0, -50.0, 36.0) 
     show street_art_rage at galleryItem(0.6, 0.8, 0.6, 1.4, 50.0, 36.0) 
