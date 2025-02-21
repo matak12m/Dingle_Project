@@ -209,3 +209,4 @@ init python:
 # define build.itch_project = "renpytom/test-project"
 
 define config.default_textshader = "typewriter"
+define config.gl2 = True
