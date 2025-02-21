@@ -33,4 +33,5 @@ style choice_button_text:
     xalign 0.5 yalign 0.5
     idle_color "#111"
     hover_color "#fff"
+    text_align 0.5
     insensitive_color "#444"
