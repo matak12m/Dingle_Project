@@ -131,34 +131,40 @@ label church_scene:
         show an phiast unhappy:
             linear 0.4 xalign 1.5
 
-        show fungie angry:
-            xzoom -1.0
+        show st_cuan neutral:
+            xzoom -1.0 yzoom 1.0
             xalign -0.5 yalign 1.0
             easein 0.6 xalign 0.1
 
         u "What's this? Another tragic accident?"
         n "The priest picks up{nw}{done}"
         
-        show fungie angry:
-            easein 0.3 yalign 1.3
-            easein 0.3 yalign 1.0
+        show st_cuan neutral:
+            easein 0.3 yoffset absolute(60.0)
+            easeout 0.3 yoffset absolute(0.0)
 
 
         n "The priest picks up{fast} the statue and observes the large, jagged crack at the base."
 
         player "I'm sorry I-"
 
+        show st_cuan happy
+
         c "Oh, nonsense. Lord knows there's plenty of these to go around.{w=0.3}\nToo many if you ask me."
 
+        show st_cuan wink
+
         n "He..{w=0.3} winks at you?"
+
+        show st_cuan neutral
 
         c "I'll take this to the {i}'shop'{/i} for {i}'repairs'{/i}."
 
         n "As he walks away,{nw}{done} you watch him casually throw the statue into a clump of bushes,
         swallowing it whole."
 
-        show fungie angry:
-            ease 1.5 xalign 1.5
+        show st_cuan neutral:
+            ease 1.5 xalign 2.0
 
         show an phiast unhappy:
             pause 0.3
@@ -222,7 +228,7 @@ label church_scene:
 
         player "But-"
 
-        show fungie angry:
+        show st_cuan neutral:
             xzoom 1.0
             ease 0.6 xalign 0.9
 
