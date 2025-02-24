@@ -9,7 +9,7 @@ label tourist_pressed:
     if(WentToTouristCenter==True):
         n "I think I've seen enough there, let's go somewhere else for a change!"
         jump map_screen
-    elif(FungieTime==False):
+    elif(FungieTime!=True):
         a "Hey, can we go somewhere else? I don't really want to be around that statue..."
         jump map_screen
     
