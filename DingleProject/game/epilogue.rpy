@@ -268,7 +268,7 @@ label choice_epilogue_fungie:
 
 label choice_epilogue_both:
     play music "audio/EmotionalPianoMusic" fadeout 1.0
-    if (APRelationship > 4 and FRelationship > 4):
+    if ((APRelationship + FRelationship) > 8):
 
         n "You manage to catch the eyes of both Fungie and An Phiast, who tower over the crowd below them."
 
