@@ -473,7 +473,7 @@ label choice_epilogue_both:
         n "...right?"
         pause 3.0
         scene black_screen
-        with very_slow_fade
+        with slow_fade
         return
 
 label choice_epilogue_bus:
